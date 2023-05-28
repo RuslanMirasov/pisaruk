@@ -11,6 +11,31 @@
   --backdrop: rgba(94, 99, 99, 0.7);
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@font-face {
+  font-family: 'coco_gothic_small_capsbold';
+  src: url('../fonts/cgsc-bold-webfont.woff2') format('woff2'), url('../fonts/cgsc-bold-webfont.woff') format('woff'),
+    url('../fonts/cgsc-bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'coco_gothic_small_capslight';
+  src: url('../fonts/cgsc-light-webfont.woff2') format('woff2'), url('../fonts/cgsc-light-webfont.woff') format('woff'),
+    url('../fonts/cgsc-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'coco_gothic_small_capsultraLt';
+  src: url('../fonts/cgsc-ultralight-webfont.woff2') format('woff2'), url('../fonts/cgsc-ultralight-webfont.woff') format('woff'),
+    url('../fonts/cgsc-ultralight-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import '_mixins';
 @import '_body';
 @import '_typography';

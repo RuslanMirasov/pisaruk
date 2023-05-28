@@ -12,6 +12,24 @@
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@font-face {
+  font-family: "coco_gothic_small_capsbold";
+  src: url("../fonts/cgsc-bold-webfont.woff2") format("woff2"), url("../fonts/cgsc-bold-webfont.woff") format("woff"), url("../fonts/cgsc-bold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "coco_gothic_small_capslight";
+  src: url("../fonts/cgsc-light-webfont.woff2") format("woff2"), url("../fonts/cgsc-light-webfont.woff") format("woff"), url("../fonts/cgsc-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "coco_gothic_small_capsultraLt";
+  src: url("../fonts/cgsc-ultralight-webfont.woff2") format("woff2"), url("../fonts/cgsc-ultralight-webfont.woff") format("woff"), url("../fonts/cgsc-ultralight-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /*responsive css styles*/
 .body {
   display: inline-flex;
@@ -20,11 +38,12 @@
   width: 100%;
   height: auto;
   min-height: 100vh;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  line-height: 1.625;
+  font-family: "coco_gothic_small_capsultraLt", sans-serif;
+  font-size: 12px;
+  line-height: 1.3333333333;
   font-weight: 400;
-  background-color: #fff;
+  color: #fff;
+  background-color: #000;
 }
 .body.lock {
   overflow-x: hidden;
