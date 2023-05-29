@@ -6,42 +6,38 @@
     <meta name="description" content="description" />
     <link rel="icon" type="image/svg+xml" href="/pisaruk/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>Dmitriy Pisaruk</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     
     
-    <script type="module" crossorigin src="/pisaruk/assets/index-f919dccf.js"></script>
-    <link rel="stylesheet" href="/pisaruk/assets/index-67858851.css">
+    <script type="module" crossorigin src="/pisaruk/assets/index-94b4056e.js"></script>
+    <link rel="stylesheet" href="/pisaruk/assets/index-122499f1.css">
   </head>
   <body class="body">
     <!-- preloader -->
 <div class="preloader">
-  <div class="preloader__procent">
-    <div class="preloader__svg"></div>
-    <p data-preloader>0%</p>
-  </div>
+  <p class="preloaderLogo">
+    <span class="preloaderLogo__top">ДМИТРИЙ</span>
+    <span class="preloaderLogo__bottom">ПИСАРУК</span>
+  </p>
 </div>
 
-    <!--header-->
+    <main class="main">
+      <!--header-->
 <header class="header">
   <div class="container">
     <a href="#" class="logo" data-scrollto="section--hero">
-      <svg width="40" height="36"><use href="/pisaruk/assets/icons-6dad1121.svg#logo"></use></svg>
-      <span>Product</span>
+      <svg width="102" height="36"><use href="/pisaruk/assets/icons-6dad1121.svg#logo"></use></svg>
     </a>
     <div class="menu-backdrop">
       <button type="button" class="close-area" data-menu-open></button>
       <div class="menu-body">
         <nav class="menu">
           <ul>
-            <li class="menu__item"><a href="#" data-scrollto="section--hero">Home</a></li>
-            <li class="menu__item"><a href="#" data-scrollto="section--hero">About</a></li>
-            <li class="menu__item"><a href="#" data-scrollto="section--hero">Menu</a></li>
-            <li class="menu__item"><a href="#" data-scrollto="section--hero">Service</a></li>
-            <li class="menu__item"><a href="#" data-scrollto="section--hero">Contact</a></li>
+            <li><a href="#!">Фильмография</a></li>
+            <li><a href="#!">Обо мне</a></li>
+            <li><a href="#!">Клиенты</a></li>
+            <li><a href="#!">Контакты</a></li>
           </ul>
         </nav>
         <button class="button" data-popup="request">button</button>
@@ -52,103 +48,33 @@
 </header>
 <!--header end-->
 
-    <main class="main">
-      <!--section Hero-->
+      <div class="heroSlider">
+  <div class="swiper heroSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="/pisaruk/assets/slide1-06a3dcb5.jpg" alt="Дмитрий Писарук" width="1280" /></div>
+      <div class="swiper-slide"><img src="/pisaruk/assets/slide2-3f8d6294.jpg" alt="Дмитрий Писарук" width="1280" /></div>
+      <div class="swiper-slide"><img src="/pisaruk/assets/slide3-0db72db2.jpg" alt="Дмитрий Писарук" width="1280" /></div>
+    </div>
+  </div>
+</div>
+
+<!--section Hero-->
 <section class="section section--hero">
   <div class="container">
     <div class="title-wrapp">
-      <h1 class="title title--h1">Title H1</h1>
-      <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <h1 class="title title--h1">Дмитрий Писарук</h1>
+      <p class="subtitle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eius alias et! Tempora illum, in cumque sit, magnam assumenda aliquid quod amet
+        officia necessitatibus laboriosam nulla quia aperiam debitis saepe. Deleniti quam autem odit eum, accusantium nostrum reiciendis, laboriosam
+        officiis omnis voluptates reprehenderit quos, nemo nisi. Quasi error eligendi sunt tenetur veniam. Fugit repudiandae iste, iusto error in
+      </p>
       <button class="button" data-popup="request">button</button>
-    </div>
-    <div class="formBox">
-      <form action="#" method="POST" class="form" autocomplete="off" novalidate>
-        <input type="hidden" name="subject" class="subject" value="Order Form" />
-        <!-- name -->
-        <label class="label">
-          <span class="label__text">Name</span>
-          <input type="text" class="input" name="name" placeholder="Ruslan Mirasov" required />
-        </label>
-        <!-- Phone -->
-        <label class="label">
-          <span class="label__text">Phone number</span>
-          <input type="tel" class="input" name="phone" placeholder="+38 (0--) --- -- --" required />
-        </label>
-        <!-- Email -->
-        <label class="label">
-          <span class="label__text">Email</span>
-          <input type="email" class="input" name="email" placeholder="example@gmail.com" required />
-        </label>
-
-        <!-- Select -->
-        <label class="label label--select">
-          <span class="label__text">Select your skills</span>
-          <select name="skills" class="select">
-            <option value="HTML">HTML</option>
-            <option value="CSS">CSS</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="React">React</option>
-            <option value="Node">Node</option>
-          </select>
-        </label>
-
-        <!-- checkbox -->
-        <fieldset class="fieldset">
-          <legend class="fieldset__title">Select your skills</legend>
-          <label class="label label--checkbox">
-            <input type="checkbox" name="checkbox1" class="checkbox" value="Javascript" required />
-            <span class="label__text">Javascript</span>
-          </label>
-          <label class="label label--checkbox">
-            <input type="checkbox" name="checkbox1" class="checkbox" value="HTML" required />
-            <span class="label__text">HTML</span>
-          </label>
-          <label class="label label--checkbox">
-            <input type="checkbox" name="checkbox1" class="checkbox" value="CSS" />
-            <span class="label__text">CSS</span>
-          </label>
-        </fieldset>
-        <!-- radio -->
-        <fieldset class="fieldset">
-          <legend class="fieldset__title">Sex</legend>
-          <label class="label label--radio">
-            <input type="radio" name="sex" class="radio" value="Male" required />
-            <span class="label__text">Male</span>
-          </label>
-          <label class="label label--radio">
-            <input type="radio" name="sex" class="radio" value="Female" required />
-            <span class="label__text">Female</span>
-          </label>
-        </fieldset>
-        <!-- submit -->
-        <div class="label">
-          <button type="submit" class="button button--border medium button--submit" disabled>Send</button>
-        </div>
-        <!-- agree -->
-        <fieldset class="fieldset">
-          <label class="label label--checkbox full">
-            <input type="checkbox" name="agree" class="checkbox agree" value="agree" />
-            <span class="label__text">By clicking submit, you agree to our privacy policy</span>
-          </label>
-        </fieldset>
-      </form>
     </div>
   </div>
 </section>
 <!--section Hero end-->
 
     </main>
-    <!--footer-->
-<footer class="footer">
-  <div class="container">
-    <a href="#" class="logo" data-scrollto="section--hero">
-      <svg width="40" height="36"><use href="/pisaruk/assets/icons-6dad1121.svg#logo"></use></svg>
-      <span>Product</span>
-    </a>
-  </div>
-</footer>
-<!--footer end-->
-
     <!-- backdrop -->
 <div class="backdrop is-hidden"></div>
 
@@ -207,7 +133,6 @@
   </div>
 </div>
 <!-- MODAL POPUP END-->
-
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     
