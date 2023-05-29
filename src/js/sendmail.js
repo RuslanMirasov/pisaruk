@@ -220,6 +220,11 @@ closeButton.forEach(closeBtn => {
 
 //POPUP OPEN FUNCTION
 function popup(id, subject, title, subtitle, btn) {
+  popupClose();
+  if (modalBackdrop.classList.contains('is-hidden')) {
+    modalBackdrop.classList.remove('is-hidden');
+    scrollbarModify();
+  }
   if (id == 'request') {
     const popupSubject = document.querySelector('#request .subject');
     const popupTitle = document.querySelector('#request .popup-title');
@@ -253,17 +258,18 @@ function popup(id, subject, title, subtitle, btn) {
         document.querySelector('#request .button[type="submit"]').innerHTML = defaultPopupInfo[4];
       }
     }
-  }
-  popupClose();
-  if (modalBackdrop.classList.contains('is-hidden')) {
-    modalBackdrop.classList.remove('is-hidden');
-    scrollbarModify();
+  } else if (id == 'video' && subject != '') {
+    let videoLink = subject.split('/');
+    const videoID = videoLink.length - 1;
+    const iframeUrl = `<iframe src='https://player.vimeo.com/video/${videoLink[videoID]}' frameborder='0' allowfullscreen></iframe>`;
+    document.querySelector('.vimeoIframe').insertAdjacentHTML('beforeend', iframeUrl);
   }
   document.getElementById(id).classList.remove('is-hidden');
 }
 
 //POPUP CLOSE FUNCTION
 function popupClose() {
+  document.querySelector('.vimeoIframe').innerHTML = '';
   allPopups.forEach(popup => {
     popup.classList.add('is-hidden');
     setTimeout(function () {
