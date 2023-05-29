@@ -11,7 +11,7 @@
     
     
     <script type="module" crossorigin src="/pisaruk/assets/index-53e04236.js"></script>
-    <link rel="stylesheet" href="/pisaruk/assets/index-87083e7e.css">
+    <link rel="stylesheet" href="/pisaruk/assets/index-8a11d836.css">
   </head>
   <body class="body">
     <!-- preloader -->
@@ -52,7 +52,7 @@
           <ul class="socials">
             <li>
               <a href="#!" target="_blank">
-                <svg width="26" height="25"><use href="/pisaruk/assets/icons-d9f5260e.svg#instagram"></use></svg>
+                <svg width="26" height="25"><use href="/pisaruk/assets/icons-72a6f4d2.svg#instagram"></use></svg>
               </a>
             </li>
           </ul>
@@ -75,8 +75,11 @@
     <div class="title-wrapp">
       <h1 class="title title--h1">Дмитрий Писарук</h1>
       <p class="subtitle">продюсер</p>
-      <button type="button" class="play">play</button>
     </div>
+    <button type="button" class="play" data-popup="video">
+      <svg width="37" height="60" class="play__border"><use href="/pisaruk/assets/icons-72a6f4d2.svg#play_border"></use></svg>
+      <svg width="37" height="60" class="play__center"><use href="/pisaruk/assets/icons-72a6f4d2.svg#play"></use></svg>
+    </button>
   </div>
 </section>
 <!--section Hero end-->
@@ -86,7 +89,7 @@
   <ul class="socials">
     <li>
       <a href="#!" target="_blank">
-        <svg width="26" height="25"><use href="/pisaruk/assets/icons-d9f5260e.svg#instagram"></use></svg>
+        <svg width="26" height="25"><use href="/pisaruk/assets/icons-72a6f4d2.svg#instagram"></use></svg>
       </a>
     </li>
   </ul>
@@ -148,6 +151,22 @@
       <button class="popup__close" data-popup-close></button>
       <b class="popup-title">Form was sended!</b>
       <p class="popup-subtitle">thank you for your massege.</p>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEO -->
+<div class="modal is-hidden" id="video">
+  <div class="popup__body">
+    <button type="button" class="close-area" data-popup-close></button>
+    <div class="popup">
+      <button class="popup__close" data-popup-close></button>
+      <iframe
+        src="https://player.vimeo.com/video/383514704"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
   </div>
 </div>
