@@ -24,21 +24,21 @@
 
 .preloaderLogo {
   position: relative;
-  font-weight: 700;
-  font-size: 58px;
-  line-height: 62px;
+  font-family: 'coco_bold', Verdana;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 28px;
   span {
     display: block;
     position: relative;
     opacity: 0;
-    color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 0.5px #fff;
+    color: #fff;
   }
 }
 
 .preloaderLogo__top {
-  animation: 2000ms var(--cubic) 0ms infinite preloader-top;
+  animation: 2500ms var(--cubic) 0ms infinite preloader-top;
 }
 .preloaderLogo__bottom {
-  animation: 2000ms var(--cubic) 150ms infinite preloader-bottom;
+  animation: 2500ms var(--cubic) 150ms infinite preloader-bottom;
 }

@@ -1,0 +1,23 @@
+.footer {
+  position: relative;
+  color: #fff;
+  @include css-r('padding-top', 30, 10, 1);
+  @include css-r('padding-bottom', 30, 10, 1);
+  @include css-r('padding-left', 40, 15, 1);
+  @include css-r('padding-right', 40, 15, 1);
+}
+
+.socials {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  a {
+    transition: 250ms var(--cubic);
+    opacity: 1;
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+}

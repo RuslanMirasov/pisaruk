@@ -5,10 +5,9 @@
   width: 100%;
   height: auto;
   min-height: 100vh;
-  font-family: 'coco_gothic_small_capsultraLt', sans-serif;
+  font-family: 'coco_ultralight', verdana;
   font-size: 12px;
   line-height: calc(16 / 12);
-  font-weight: 400;
   color: #fff;
   background-color: #000;
 
@@ -19,17 +18,22 @@
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-sizing: border-box;
+  position: relative;
   min-height: 100vh;
-  padding: 40px;
+  @include css-r('padding', 40, 15, 1);
+  z-index: 2;
   &:before {
     content: '';
     position: absolute;
-    border: 1px solid #fff;
-    left: 39px;
-    right: 39px;
-    top: 39px;
-    bottom: 39px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    @include css-r('right', 39, 14, 1);
+    @include css-r('top', 39, 14, 1);
+    @include css-r('bottom', 39, 14, 1);
+    @include css-r('left', 39, 14, 1);
     z-index: 1;
     pointer-events: none;
   }
