@@ -18,24 +18,32 @@
   }
 }
 
+.main {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 40px;
+  &:before {
+    content: '';
+    position: absolute;
+    border: 1px solid #fff;
+    left: 39px;
+    right: 39px;
+    top: 39px;
+    bottom: 39px;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
 .container {
   position: relative;
   margin: 0 auto;
   padding: 0px 20px;
-  @media screen and (max-width: 767px) {
-    max-width: 480px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    max-width: 768px;
-  }
-  @media screen and (min-width: 1280px) {
-    max-width: 1280px;
-  }
+  max-width: 1280px;
 }
 
 .section {
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 100px 0px;
 }

@@ -10,11 +10,11 @@ $maxWidthContainer: 1280;
     #{$property}: $startSize + px;
 
     @media only screen and (min-width: 0px) and (max-width: ($maxWidthContainer + px)) {
-      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth - 375}));
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
     }
   } @else {
     //olweys
-    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth - 375}));
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
   }
 }
 
