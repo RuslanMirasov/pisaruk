@@ -17,15 +17,8 @@
   font-family: 'coco_ultralight', verdana;
   font-weight: normal;
   &.title--h1 {
-    @media screen and (max-width: 767px) {
-      font-size: 30px;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-      font-size: 42px;
-    }
-    @media screen and (min-width: 1280px) {
-      font-size: 64px;
-    }
+    @include css-r('font-size', 120, 50, 1);
+    @include css-r('line-height', 120, 50, 1);
   }
   &.title--h2 {
     @media screen and (max-width: 767px) {
