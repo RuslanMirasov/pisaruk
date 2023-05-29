@@ -170,12 +170,22 @@
 }
 
 #video {
+  .popup__body {
+    padding: 0px;
+  }
+  &.is-hidden {
+    .popup {
+      transform: translate(0px, 0px) scale(0.98);
+    }
+  }
   .popup {
     max-width: 100%;
     background: rgba(0, 0, 0, 0);
-    padding: 50px 0px 0px 0px;
-    height: 90vh;
-    margin-bottom: 4vh;
+    padding: 6vh 6vh 6vh 6vh;
+    height: 100vh;
+    transition: 500ms var(--cubic);
+    transform: translate(0px, 0px) scale(1);
+
     &:before {
       content: none;
     }
@@ -183,8 +193,8 @@
     }
   }
   .popup__close {
-    right: 0px;
-    top: 0px;
+    right: 10px;
+    top: 10px;
     width: 40px;
     height: 40px;
     border-radius: 0px;
