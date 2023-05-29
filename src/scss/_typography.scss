@@ -6,7 +6,7 @@
 }
 
 .title-wrapp > * {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .title-wrapp > *:first-child {
@@ -31,10 +31,7 @@
 }
 
 .subtitle {
-  @media screen and (max-width: 767px) {
-    font-size: 36px;
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 20px;
-  }
+  font-family: 'coco_ultralight', verdana;
+  font-size: 24px;
+  line-height: calc(32 / 24);
 }

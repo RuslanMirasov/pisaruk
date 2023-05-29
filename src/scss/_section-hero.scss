@@ -32,3 +32,50 @@
     }
   }
 }
+
+.section--hero {
+  .container {
+    text-align: center;
+  }
+  .title {
+    margin-top: 2%;
+    @media screen and (max-width: 767px) {
+      margin-top: 30%;
+    }
+  }
+}
+
+.play {
+  @include flex_center();
+  @include css-r('width', 182, 120, 1);
+  @include css-r('height', 182, 120, 1);
+  margin: 0 auto;
+  @include css-r('margin-top', 70, 28, 1);
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  svg {
+    display: block;
+    &.play__border {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      animation: 8s linear 0s infinite rotate2;
+    }
+    &.play__center {
+      position: absolute;
+      width: 20%;
+      height: auto;
+      transform: translate(15%, 0%) scale(1);
+      transition: 250ms var(--cubic);
+    }
+  }
+  &:hover,
+  &:focus {
+    svg {
+      &.play__center {
+        transform: translate(15%, 0%) scale(1.2);
+      }
+    }
+  }
+}
