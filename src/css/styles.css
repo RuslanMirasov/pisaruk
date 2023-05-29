@@ -3,11 +3,11 @@
   --lime: #bbf330;
   --black: #2c2c2c;
   --grey: #f5f5f5;
-  --placeholder: #c4c4c4;
+  --placeholder: rgba(255, 255, 255, 0.4);
   --white: #fefefe;
-  --button-color: rgb(188, 26, 26);
-  --button-color-hover: rgb(88, 11, 11);
-  --red: #ff0000;
+  --button-color: #fff;
+  --button-color-hover: #bbf330;
+  --red: #e34f4f;
   --backdrop: rgba(0, 0, 0, 0.5);
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -765,20 +765,21 @@
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  padding: 10px 30px;
-  border-radius: 8px;
-  border: 1px solid var(--button-color);
+  line-height: 1.6;
+  font-family: "coco_light", verdana;
+  width: 100%;
+  max-width: 260px;
+  padding: 10px 20px;
   background: var(--button-color);
-  color: #fff;
+  color: #000;
   transition: 250ms var(--cubic);
   cursor: pointer;
 }
 .button:hover, .button:focus {
-  border: 1px solid var(--button-color-hover);
   background: var(--button-color-hover);
 }
-.button.big {
-  padding: 11px 22px;
+.button.full {
+  max-width: 100%;
 }
 .button:disabled {
   opacity: 0.5;
@@ -810,7 +811,7 @@
   position: relative;
   font-size: 16px;
   margin-bottom: 6px;
-  color: #000;
+  color: #fff;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -821,13 +822,15 @@
 .input {
   display: inline-block;
   width: 100%;
-  height: 60px;
-  font-size: 16px;
-  line-height: 1.25;
-  padding: 0px 20px;
-  background: #ffffff;
-  border: 1px solid #000000;
-  color: #000000;
+  height: 58px;
+  font-size: 24px;
+  line-height: 1.3333333333;
+  padding: 0px 10px;
+  background: none;
+  border: none;
+  font-family: "coco_light";
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
   outline: none;
   transition: border 250ms var(--cubic);
 }
@@ -835,37 +838,37 @@
   padding-left: 40px;
 }
 .input.red {
-  border: 1px solid var(--red) !important;
+  border-bottom: 1px solid var(--red) !important;
   color: var(--red);
 }
 .input.red + .label__icon {
   fill: var(--red) !important;
 }
 .input::-moz-placeholder {
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 24px;
+  line-height: 1.3333333333;
   color: var(--placeholder);
   -moz-transition: opacity 250ms var(--cubic);
   transition: opacity 250ms var(--cubic);
   opacity: 1;
 }
 .input:-ms-input-placeholder {
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 24px;
+  line-height: 1.3333333333;
   color: var(--placeholder);
   -ms-transition: opacity 250ms var(--cubic);
   transition: opacity 250ms var(--cubic);
   opacity: 1;
 }
 .input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 24px;
+  line-height: 1.3333333333;
   color: var(--placeholder);
   transition: opacity 250ms var(--cubic);
   opacity: 1;
 }
 .input:focus {
-  border: 1px solid rgb(50, 156, 50);
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 .input:focus::-moz-placeholder {
   opacity: 0;
@@ -876,29 +879,10 @@
 .input:focus::placeholder {
   opacity: 0;
 }
-.input:focus + .label__icon {
-  fill: rgb(50, 156, 50);
-}
-.input.valid {
-  border: 1px solid rgb(50, 156, 50);
-}
-.input.valid + .label__icon {
-  fill: rgb(50, 156, 50);
-}
 .input:-webkit-autofill {
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15) !important;
   -webkit-text-fill-color: #000000 !important;
   color: #000000 !important;
-}
-
-.label__icon {
-  display: block;
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  fill: var(--placeholder);
-  transition: fill 250ms var(--cubic);
 }
 
 /*textarea*/
@@ -997,6 +981,7 @@
   height: 0px;
   left: 0px;
   top: 4px;
+  font-family: "coco_light", verdana;
   flex-wrap: wrap;
   font-size: 12px;
   line-height: 16px;
@@ -1110,7 +1095,9 @@
 .modal .popup {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 450px;
+  background: #1a1a1a;
+  padding: 50px 40px;
   height: auto;
   text-align: center;
   opacity: 1;
@@ -1120,6 +1107,16 @@
           user-select: none;
   transform: translate(0px, 0px);
   transition: opacity 250ms var(--cubic), transform 250ms var(--cubic);
+}
+.modal .popup:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  pointer-events: none;
 }
 .modal .popup .button {
   margin-top: 32px;
@@ -1134,8 +1131,8 @@
 .popup__close {
   display: flex;
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 16px;
+  top: 16px;
   justify-content: center;
   align-items: center;
   width: 30px;
@@ -1168,7 +1165,8 @@
 
 .popup-title {
   display: block;
-  font-size: 24px;
+  font-family: "coco_bold";
+  font-size: 30px;
   line-height: 1.2;
   margin-bottom: 14px;
 }
@@ -1178,6 +1176,10 @@
   font-size: 16px;
   line-height: 1.4;
   margin-bottom: 32px;
+}
+
+#ok .button {
+  margin-top: 0px;
 }
 
 #loading .popup {
@@ -1207,8 +1209,7 @@
 
 iframe {
   width: 100%;
-  height: 100%;
-  min-height: 420px;
+  height: 80vh;
 }
 
 .slider-arrow {

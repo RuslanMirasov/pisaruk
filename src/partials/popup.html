@@ -13,25 +13,21 @@
         back to you as soon as possible!
       </p>
       <form action="#" method="POST" class="form" autocomplete="off" novalidate>
-        <input type="hidden" name="subject" class="subject" value="Order Form" />
+        <input type="hidden" name="subject" class="subject" value="Заявка" />
         <!-- name -->
         <label class="label">
-          <span class="label__text">Name</span>
-          <input type="text" class="input" name="name" placeholder="Ruslan Mirasov" required />
+          <input type="text" class="input" name="name" placeholder="ФИО" required />
         </label>
         <!-- Phone -->
         <label class="label">
-          <span class="label__text">Phone number</span>
-          <input type="tel" id="phone-input" class="input input--tel" name="phone" placeholder="+38 (0--) --- -- --" required />
+          <input type="tel" id="phone-input" class="input input--tel" name="phone" placeholder="Телефон" required />
         </label>
         <!-- Email -->
         <label class="label">
-          <span class="label__text">Email</span>
-          <input type="email" class="input" name="email" placeholder="example@gmail.com" required />
+          <input type="email" class="input" name="email" placeholder="E-mail" required />
         </label>
         <!-- submit -->
-        <button type="submit" class="button button--border medium button--submit">Send</button>
-        <button type="button" class="button" data-popup="ok">ok</button>
+        <button type="submit" class="button full button--submit">Send</button>
       </form>
     </div>
   </div>
@@ -50,8 +46,9 @@
     <button type="button" class="close-area" data-popup-close></button>
     <div class="popup">
       <button class="popup__close" data-popup-close></button>
-      <b class="popup-title">Form was sended!</b>
-      <p class="popup-subtitle">thank you for your massege.</p>
+      <b class="popup-title">Заявка отправлена!</b>
+      <p class="popup-subtitle">Наш менеджер свяжется с <br />Вами в ближайшее время</p>
+      <button type="button" data-popup-close class="button">ОК</button>
     </div>
   </div>
 </div>
@@ -62,12 +59,12 @@
     <button type="button" class="close-area" data-popup-close></button>
     <div class="popup">
       <button class="popup__close" data-popup-close></button>
-      <iframe
-        src="https://player.vimeo.com/video/383514704"
+      <!-- <iframe
+        src="https://player.vimeo.com/video/284905541"
         frameborder="0"
         allow="autoplay; fullscreen; picture-in-picture"
         allowfullscreen
-      ></iframe>
+      ></iframe> -->
     </div>
   </div>
 </div>
