@@ -12,6 +12,7 @@
   opacity: 1;
   visibility: visible;
   transition: 250ms var(--cubic);
+  backdrop-filter: blur(3px);
   &.is-hidden {
     visibility: hidden;
     opacity: 0;
@@ -56,13 +57,9 @@
   .popup {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     height: auto;
     text-align: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 20px;
-    background: #fff;
-    padding: 40px 30px;
     opacity: 1;
     user-select: none;
     transform: translate(0px, 0px);
@@ -72,7 +69,7 @@
       min-width: 110px;
     }
     @media screen and (max-width: 419px) {
-      padding: 32px 16px;
+      padding: 32px 0px;
     }
   }
 }
@@ -80,15 +77,14 @@
 .popup__close {
   display: flex;
   position: absolute;
-  right: 12px;
-  top: 12px;
+  right: 0px;
+  top: 0px;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
   border-radius: 30px;
-  border: 1px solid #000;
-  color: var(--black);
+  color: #fff;
   cursor: pointer;
   outline: none;
   transition: 350ms var(--cubic);
@@ -101,7 +97,7 @@
     display: block;
     width: 50%;
     height: 2px;
-    background: #000;
+    background: #fff;
   }
   &:before {
     transform: rotate(45deg);
@@ -154,4 +150,10 @@
       animation: 800ms linear 0s infinite rotate;
     }
   }
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
 }

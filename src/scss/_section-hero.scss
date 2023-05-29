@@ -40,7 +40,7 @@
   .title {
     margin-top: 2%;
     @media screen and (max-width: 767px) {
-      margin-top: 30%;
+      margin-top: 10%;
     }
   }
 }
@@ -54,6 +54,11 @@
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
+  @media screen and (max-width: 1439px) {
+    @include css-r('width', 150, 120, 1);
+    @include css-r('height', 150, 120, 1);
+    @include css-r('margin-top', 50, 28, 1);
+  }
   svg {
     display: block;
     &.play__border {

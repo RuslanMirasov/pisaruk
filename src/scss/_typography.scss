@@ -19,6 +19,10 @@
   &.title--h1 {
     @include css-r('font-size', 120, 50, 1);
     @include css-r('line-height', 120, 50, 1);
+    @media screen and (max-width: 1439px) {
+      @include css-r('font-size', 80, 50, 1);
+      @include css-r('line-height', 80, 50, 1);
+    }
   }
   &.title--h2 {
     @media screen and (max-width: 767px) {
