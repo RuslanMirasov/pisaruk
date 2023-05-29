@@ -834,6 +834,13 @@
   outline: none;
   transition: border 250ms var(--cubic);
 }
+@media screen and (max-width: 767px) {
+  .input {
+    height: 48px;
+    font-size: 16px;
+    line-height: 2;
+  }
+}
 .input.input--icon {
   padding-left: 40px;
 }
@@ -866,6 +873,20 @@
   color: var(--placeholder);
   transition: opacity 250ms var(--cubic);
   opacity: 1;
+}
+@media screen and (max-width: 767px) {
+  .input::-moz-placeholder {
+    font-size: 16px;
+    line-height: 2;
+  }
+  .input:-ms-input-placeholder {
+    font-size: 16px;
+    line-height: 2;
+  }
+  .input::placeholder {
+    font-size: 16px;
+    line-height: 2;
+  }
 }
 .input:focus {
   border-bottom: 1px solid rgb(255, 255, 255);
@@ -1122,9 +1143,9 @@
   margin-top: 32px;
   min-width: 110px;
 }
-@media screen and (max-width: 419px) {
+@media screen and (max-width: 767px) {
   .modal .popup {
-    padding: 32px 0px;
+    padding: 50px 30px 40px 30px;
   }
 }
 
