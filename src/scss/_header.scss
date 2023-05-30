@@ -1,13 +1,16 @@
 /*----------------------------------------------- HEADER*/
 
 .header {
-  position: relative;
+  position: fixed;
   left: 0px;
   top: 0px;
-  @include css-r('padding-top', 30, 10, 1);
-  @include css-r('padding-bottom', 30, 10, 1);
-  @include css-r('padding-left', 40, 15, 1);
-  @include css-r('padding-right', 40, 15, 1);
+  z-index: 20;
+  @include css-r('padding-top', 70, 28, 1);
+  padding-bottom: 20px;
+  @include css-r('padding-left', 80, 30, 1);
+  @include css-r('padding-right', 80, 30, 1);
+  background: rgba(0, 0, 0, 0.7);
+
   width: 100%;
   .container {
     display: flex;
@@ -111,17 +114,6 @@
     visibility: hidden;
     opacity: 0;
     transition: 250ms var(--cubic);
-    &:before {
-      content: '';
-      position: absolute;
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      @include css-r('right', 39, 14, 1);
-      @include css-r('top', 39, 14, 1);
-      @include css-r('bottom', 39, 14, 1);
-      @include css-r('left', 39, 14, 1);
-      z-index: 1;
-      pointer-events: none;
-    }
   }
   @media screen and (min-width: 768px) {
     justify-content: flex-end;
@@ -285,10 +277,14 @@
   justify-content: space-between;
   align-items: center;
   @media screen and (max-width: 767px) {
-    @include css-r('padding-top', 30, 15, 1);
-    @include css-r('padding-bottom', 30, 15, 1);
-    @include css-r('padding-left', 40, 15, 1);
-    @include css-r('padding-right', 40, 15, 1);
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding-top: 20px;
+    @include css-r('padding-bottom', 60, 27, 1);
+    @include css-r('padding-left', 80, 30, 1);
+    @include css-r('padding-right', 80, 30, 1);
   }
   .socials {
     @media screen and (min-width: 768px) {

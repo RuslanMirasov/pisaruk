@@ -14,19 +14,8 @@
   z-index: 9999;
   background: #000000;
   transition: opacity 0ms var(--cubic), visibility 0ms var(--cubic);
-  &:before {
-    content: '';
-    position: absolute;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    @include css-r('right', 39, 14, 1);
-    @include css-r('top', 39, 14, 1);
-    @include css-r('bottom', 39, 14, 1);
-    @include css-r('left', 39, 14, 1);
-    z-index: 1;
-    pointer-events: none;
-  }
   &.is--hidden {
-    transition: opacity 1200ms var(--cubic), visibility 1200ms var(--cubic);
+    transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -34,22 +23,16 @@
 }
 
 .preloaderLogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  font-family: 'coco_bold', Verdana;
-  text-transform: uppercase;
-  font-size: 24px;
-  line-height: 28px;
-  span {
+  width: 100px;
+  height: 100px;
+  svg {
     display: block;
-    position: relative;
-    opacity: 0;
-    color: #fff;
+    max-width: 100%;
+    max-height: 100%;
   }
-}
-
-.preloaderLogo__top {
-  animation: 2500ms var(--cubic) 0ms infinite preloader-top;
-}
-.preloaderLogo__bottom {
-  animation: 2500ms var(--cubic) 150ms infinite preloader-bottom;
 }

@@ -5,5 +5,5 @@ window.addEventListener('load', preloaderHide);
 function preloaderHide() {
   setTimeout(function () {
     preloaderWrapper.classList.add('is--hidden');
-  }, 400);
+  }, 300);
 }

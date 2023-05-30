@@ -20,23 +20,12 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   box-sizing: border-box;
   position: relative;
   min-height: 100vh;
   @include css-r('padding', 40, 15, 1);
   z-index: 2;
-  &:before {
-    content: '';
-    position: absolute;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    @include css-r('right', 39, 14, 1);
-    @include css-r('top', 39, 14, 1);
-    @include css-r('bottom', 39, 14, 1);
-    @include css-r('left', 39, 14, 1);
-    z-index: 1;
-    pointer-events: none;
-  }
 }
 
 .container {
@@ -52,4 +41,15 @@
   padding: 20px 0px;
   @include css-r('padding-left', 40, 15, 1);
   @include css-r('padding-right', 40, 15, 1);
+}
+
+.whiteFrame {
+  position: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  @include css-r('right', 39, 14, 1);
+  @include css-r('top', 39, 14, 1);
+  @include css-r('bottom', 39, 14, 1);
+  @include css-r('left', 39, 14, 1);
+  z-index: 50;
+  pointer-events: none;
 }

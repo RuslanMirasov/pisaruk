@@ -1,10 +1,27 @@
 .footer {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
   color: #fff;
-  @include css-r('padding-top', 30, 10, 1);
-  @include css-r('padding-bottom', 30, 10, 1);
-  @include css-r('padding-left', 40, 15, 1);
-  @include css-r('padding-right', 40, 15, 1);
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+  padding-top: 20px;
+  @include css-r('padding-bottom', 60, 23, 1);
+  @include css-r('padding-left', 80, 30, 1);
+  @include css-r('padding-right', 80, 30, 1);
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+  }
 }
 
 .socials {

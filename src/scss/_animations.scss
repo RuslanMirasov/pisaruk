@@ -31,37 +31,6 @@
   }
 }
 
-@keyframes preloader-top {
-  0% {
-    transform: translate(40px, 0px);
-    opacity: 0;
-  }
-  30%,
-  70% {
-    transform: translate(0px, 0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-40px, 0px);
-    opacity: 0;
-  }
-}
-@keyframes preloader-bottom {
-  0% {
-    transform: translate(40px, 0px);
-    opacity: 0;
-  }
-  30%,
-  70% {
-    transform: translate(0px, 0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-40px, 0px);
-    opacity: 0;
-  }
-}
-
 .rotate-animation {
   animation: 4s linear 0s infinite rotate;
 }

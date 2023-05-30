@@ -52,7 +52,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   box-sizing: border-box;
   position: relative;
   min-height: 100vh;
@@ -62,37 +62,6 @@
 @media only screen and (min-width: 0px) and (max-width: 1280px) {
   .main {
     padding: calc(15px + 25 * ((100vw - 320px) / 960));
-  }
-}
-.main:before {
-  content: "";
-  position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  right: 39px;
-  top: 39px;
-  bottom: 39px;
-  left: 39px;
-  z-index: 1;
-  pointer-events: none;
-}
-@media only screen and (min-width: 0px) and (max-width: 1280px) {
-  .main:before {
-    right: calc(14px + 25 * ((100vw - 320px) / 960));
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 1280px) {
-  .main:before {
-    top: calc(14px + 25 * ((100vw - 320px) / 960));
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 1280px) {
-  .main:before {
-    bottom: calc(14px + 25 * ((100vw - 320px) / 960));
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 1280px) {
-  .main:before {
-    left: calc(14px + 25 * ((100vw - 320px) / 960));
   }
 }
 
@@ -118,6 +87,37 @@
 @media only screen and (min-width: 0px) and (max-width: 1280px) {
   .section {
     padding-right: calc(15px + 25 * ((100vw - 320px) / 960));
+  }
+}
+
+.whiteFrame {
+  position: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  right: 39px;
+  top: 39px;
+  bottom: 39px;
+  left: 39px;
+  z-index: 50;
+  pointer-events: none;
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .whiteFrame {
+    right: calc(14px + 25 * ((100vw - 320px) / 960));
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .whiteFrame {
+    top: calc(14px + 25 * ((100vw - 320px) / 960));
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .whiteFrame {
+    bottom: calc(14px + 25 * ((100vw - 320px) / 960));
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .whiteFrame {
+    left: calc(14px + 25 * ((100vw - 320px) / 960));
   }
 }
 
@@ -192,97 +192,54 @@
   background: #000000;
   transition: opacity 0ms var(--cubic), visibility 0ms var(--cubic);
 }
-.preloader:before {
-  content: "";
-  position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  right: 39px;
-  top: 39px;
-  bottom: 39px;
-  left: 39px;
-  z-index: 1;
-  pointer-events: none;
-}
-@media only screen and (min-width: 0px) and (max-width: 1280px) {
-  .preloader:before {
-    right: calc(14px + 25 * ((100vw - 320px) / 960));
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 1280px) {
-  .preloader:before {
-    top: calc(14px + 25 * ((100vw - 320px) / 960));
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 1280px) {
-  .preloader:before {
-    bottom: calc(14px + 25 * ((100vw - 320px) / 960));
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 1280px) {
-  .preloader:before {
-    left: calc(14px + 25 * ((100vw - 320px) / 960));
-  }
-}
 .preloader.is--hidden {
-  transition: opacity 1200ms var(--cubic), visibility 1200ms var(--cubic);
+  transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
 .preloaderLogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  font-family: "coco_bold", Verdana;
-  text-transform: uppercase;
-  font-size: 24px;
-  line-height: 28px;
+  width: 100px;
+  height: 100px;
 }
-.preloaderLogo span {
+.preloaderLogo svg {
   display: block;
-  position: relative;
-  opacity: 0;
-  color: #fff;
-}
-
-.preloaderLogo__top {
-  -webkit-animation: 2500ms var(--cubic) 0ms infinite preloader-top;
-          animation: 2500ms var(--cubic) 0ms infinite preloader-top;
-}
-
-.preloaderLogo__bottom {
-  -webkit-animation: 2500ms var(--cubic) 150ms infinite preloader-bottom;
-          animation: 2500ms var(--cubic) 150ms infinite preloader-bottom;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /*----------------------------------------------- HEADER*/
 .header {
-  position: relative;
+  position: fixed;
   left: 0px;
   top: 0px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 40px;
-  padding-right: 40px;
+  z-index: 20;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
 }
 @media only screen and (min-width: 0px) and (max-width: 1280px) {
   .header {
-    padding-top: calc(10px + 20 * ((100vw - 320px) / 960));
+    padding-top: calc(28px + 42 * ((100vw - 320px) / 960));
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 1280px) {
   .header {
-    padding-bottom: calc(10px + 20 * ((100vw - 320px) / 960));
+    padding-left: calc(30px + 50 * ((100vw - 320px) / 960));
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 1280px) {
   .header {
-    padding-left: calc(15px + 25 * ((100vw - 320px) / 960));
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 1280px) {
-  .header {
-    padding-right: calc(15px + 25 * ((100vw - 320px) / 960));
+    padding-right: calc(30px + 50 * ((100vw - 320px) / 960));
   }
 }
 .header .container {
@@ -401,39 +358,6 @@
 @media only screen and (max-width: 767px) and (min-width: 0px) and (max-width: 1280px) {
   .menu-body {
     padding: calc(15px + 25 * ((100vw - 320px) / 960));
-  }
-}
-@media screen and (max-width: 767px) {
-  .menu-body:before {
-    content: "";
-    position: absolute;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    right: 39px;
-    top: 39px;
-    bottom: 39px;
-    left: 39px;
-    z-index: 1;
-    pointer-events: none;
-  }
-}
-@media only screen and (max-width: 767px) and (min-width: 0px) and (max-width: 1280px) {
-  .menu-body:before {
-    right: calc(14px + 25 * ((100vw - 320px) / 960));
-  }
-}
-@media only screen and (max-width: 767px) and (min-width: 0px) and (max-width: 1280px) {
-  .menu-body:before {
-    top: calc(14px + 25 * ((100vw - 320px) / 960));
-  }
-}
-@media only screen and (max-width: 767px) and (min-width: 0px) and (max-width: 1280px) {
-  .menu-body:before {
-    bottom: calc(14px + 25 * ((100vw - 320px) / 960));
-  }
-}
-@media only screen and (max-width: 767px) and (min-width: 0px) and (max-width: 1280px) {
-  .menu-body:before {
-    left: calc(14px + 25 * ((100vw - 320px) / 960));
   }
 }
 @media screen and (min-width: 768px) {
@@ -607,30 +531,29 @@
 }
 @media screen and (max-width: 767px) {
   .header__buttons {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) and (max-width: 1280px) {
   .header__buttons {
-    padding-top: calc(15px + 15 * ((100vw - 320px) / 960));
+    padding-bottom: calc(27px + 33 * ((100vw - 320px) / 960));
   }
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) and (max-width: 1280px) {
   .header__buttons {
-    padding-bottom: calc(15px + 15 * ((100vw - 320px) / 960));
+    padding-left: calc(30px + 50 * ((100vw - 320px) / 960));
   }
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) and (max-width: 1280px) {
   .header__buttons {
-    padding-left: calc(15px + 25 * ((100vw - 320px) / 960));
-  }
-}
-@media only screen and (max-width: 767px) and (min-width: 0px) and (max-width: 1280px) {
-  .header__buttons {
-    padding-right: calc(15px + 25 * ((100vw - 320px) / 960));
+    padding-right: calc(30px + 50 * ((100vw - 320px) / 960));
   }
 }
 @media screen and (min-width: 768px) {
@@ -1346,32 +1269,44 @@
 }
 
 .footer {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
   color: #fff;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.footer > * {
+  position: relative;
+  z-index: 1;
 }
 @media only screen and (min-width: 0px) and (max-width: 1280px) {
   .footer {
-    padding-top: calc(10px + 20 * ((100vw - 320px) / 960));
+    padding-bottom: calc(23px + 37 * ((100vw - 320px) / 960));
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 1280px) {
   .footer {
-    padding-bottom: calc(10px + 20 * ((100vw - 320px) / 960));
+    padding-left: calc(30px + 50 * ((100vw - 320px) / 960));
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 1280px) {
   .footer {
-    padding-left: calc(15px + 25 * ((100vw - 320px) / 960));
+    padding-right: calc(30px + 50 * ((100vw - 320px) / 960));
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1280px) {
-  .footer {
-    padding-right: calc(15px + 25 * ((100vw - 320px) / 960));
-  }
+.footer:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
 }
 
 .socials {
@@ -1711,62 +1646,6 @@ iframe {
   }
   100% {
     transform: translate(0px, 0px);
-  }
-}
-@-webkit-keyframes preloader-top {
-  0% {
-    transform: translate(40px, 0px);
-    opacity: 0;
-  }
-  30%, 70% {
-    transform: translate(0px, 0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-40px, 0px);
-    opacity: 0;
-  }
-}
-@keyframes preloader-top {
-  0% {
-    transform: translate(40px, 0px);
-    opacity: 0;
-  }
-  30%, 70% {
-    transform: translate(0px, 0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-40px, 0px);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes preloader-bottom {
-  0% {
-    transform: translate(40px, 0px);
-    opacity: 0;
-  }
-  30%, 70% {
-    transform: translate(0px, 0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-40px, 0px);
-    opacity: 0;
-  }
-}
-@keyframes preloader-bottom {
-  0% {
-    transform: translate(40px, 0px);
-    opacity: 0;
-  }
-  30%, 70% {
-    transform: translate(0px, 0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-40px, 0px);
-    opacity: 0;
   }
 }
 .rotate-animation {
