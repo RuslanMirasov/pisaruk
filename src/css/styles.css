@@ -791,6 +791,13 @@
 .clients .clients__item {
   width: 17.5%;
 }
+.clients .clients__item img {
+  transition: 250ms var(--cubic);
+  filter: grayscale(100%);
+}
+.clients .clients__item:hover img {
+  filter: grayscale(0);
+}
 
 @media screen and (max-width: 1023px) {
   .clients {

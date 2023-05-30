@@ -7,6 +7,15 @@
 
   .clients__item {
     width: 17.5%;
+    img {
+      transition: 250ms var(--cubic);
+      filter: grayscale(100%);
+    }
+    &:hover {
+      img {
+        filter: grayscale(0);
+      }
+    }
   }
 }
 
