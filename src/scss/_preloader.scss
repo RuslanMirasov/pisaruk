@@ -14,6 +14,17 @@
   z-index: 9999;
   background: #000000;
   transition: opacity 0ms var(--cubic), visibility 0ms var(--cubic);
+  &:before {
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    @include css-r('right', 39, 14, 1);
+    @include css-r('top', 39, 14, 1);
+    @include css-r('bottom', 39, 14, 1);
+    @include css-r('left', 39, 14, 1);
+    z-index: 1;
+    pointer-events: none;
+  }
   &.is--hidden {
     transition: opacity 1200ms var(--cubic), visibility 1200ms var(--cubic);
     opacity: 0;

@@ -1,0 +1,20 @@
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px 3.125%;
+
+  .clients__item {
+    width: 17.5%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .clients {
+    gap: 40px 3.125%;
+    .clients__item {
+      width: 31.25%;
+    }
+  }
+}

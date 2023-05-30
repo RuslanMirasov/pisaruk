@@ -191,6 +191,37 @@
   background: #000000;
   transition: opacity 0ms var(--cubic), visibility 0ms var(--cubic);
 }
+.preloader:before {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  right: 39px;
+  top: 39px;
+  bottom: 39px;
+  left: 39px;
+  z-index: 1;
+  pointer-events: none;
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .preloader:before {
+    right: calc(14px + 25 * ((100vw - 320px) / 960));
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .preloader:before {
+    top: calc(14px + 25 * ((100vw - 320px) / 960));
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .preloader:before {
+    bottom: calc(14px + 25 * ((100vw - 320px) / 960));
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .preloader:before {
+    left: calc(14px + 25 * ((100vw - 320px) / 960));
+  }
+}
 .preloader.is--hidden {
   transition: opacity 1200ms var(--cubic), visibility 1200ms var(--cubic);
   opacity: 0;
@@ -745,6 +776,25 @@
   transform: translate(15%, 0%) scale(1.2);
 }
 
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px 3.125%;
+}
+.clients .clients__item {
+  width: 17.5%;
+}
+
+@media screen and (max-width: 1023px) {
+  .clients {
+    gap: 40px 3.125%;
+  }
+  .clients .clients__item {
+    width: 31.25%;
+  }
+}
 /*----------------------------------------------- BUTTONS*/
 .forBtn {
   display: flex;
