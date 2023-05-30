@@ -669,7 +669,11 @@
   min-height: 100vh;
   z-index: 0;
   opacity: 0.7;
-  background: rgb(1, 29, 29);
+  background: #000;
+}
+.heroSlider.heroSlider--fixed, .heroSlider.heroSlider--poster {
+  position: fixed;
+  height: 100vh;
 }
 
 .heroSwiper {
@@ -977,6 +981,24 @@
 .filmInfo li span {
   opacity: 1;
   color: #fff;
+}
+
+.poster {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0;
+  transition: 250ms;
+}
+.poster.active {
+  opacity: 0.4;
+}
+.poster.valid {
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 1439px) {
