@@ -298,12 +298,14 @@ document.addEventListener('DOMContentLoaded', event => {
   function scrollbarModify() {
     body.classList.toggle('lock');
     fixedElements.forEach(fixedElement => {
-      if (body.classList.contains('lock')) {
-        body.style.paddingRight = bodyPadding + 'px';
-        fixedElement.style.paddingRight = bodyPadding + 'px';
-      } else {
-        body.style.paddingRight = '0px';
-        fixedElement.style.paddingRight = '0px';
+      if (!fixedElement.classList.contains('header')) {
+        if (body.classList.contains('lock')) {
+          body.style.paddingRight = bodyPadding + 'px';
+          fixedElement.style.paddingRight = bodyPadding + 'px';
+        } else {
+          body.style.paddingRight = '0px';
+          fixedElement.style.paddingRight = '0px';
+        }
       }
     });
   }

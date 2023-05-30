@@ -1,15 +1,31 @@
 /*----------------------------------------------- HEADER*/
 
-.header {
+.headerWrapper {
+  display: block;
+  width: 100%;
   position: fixed;
   left: 0px;
   top: 0px;
   z-index: 20;
+}
+
+.header {
+  position: relative;
+  padding-bottom: 10px;
   @include css-r('padding-top', 70, 28, 1);
-  padding-bottom: 20px;
   @include css-r('padding-left', 80, 30, 1);
   @include css-r('padding-right', 80, 30, 1);
-  background: rgba(0, 0, 0, 0.7);
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9051995798319328) 13%, rgba(0, 0, 0, 0) 100%);
+    z-index: 3;
+  }
 
   width: 100%;
   .container {
@@ -18,6 +34,7 @@
     align-items: center;
     max-width: 100%;
     padding: 0;
+    z-index: 4;
     @media screen and (max-width: 767px) {
       flex-wrap: wrap;
     }
@@ -106,7 +123,6 @@
     top: 0px;
     width: 100%;
     height: 100%;
-    min-height: 500px;
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 1;
@@ -141,7 +157,7 @@
     margin-top: auto;
     margin-bottom: auto;
     ul {
-      padding-top: 50px;
+      padding: 60px 0px;
       li {
         display: inline-block;
         width: 100%;
@@ -281,10 +297,25 @@
     left: 0px;
     bottom: 0px;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 10px;
     @include css-r('padding-bottom', 60, 27, 1);
     @include css-r('padding-left', 80, 30, 1);
     @include css-r('padding-right', 80, 30, 1);
+    > * {
+      position: relative;
+      z-index: 2;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background: rgb(0, 0, 0);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.9051995798319328) 13%, rgba(0, 0, 0, 0) 100%);
+      z-index: 0;
+    }
   }
   .socials {
     @media screen and (min-width: 768px) {

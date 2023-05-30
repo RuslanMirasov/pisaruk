@@ -14,6 +14,11 @@
     position: fixed;
     height: 100vh;
   }
+  &.heroSlider--poster {
+    img {
+      position: relative;
+    }
+  }
 }
 
 .heroSwiper {
