@@ -991,11 +991,14 @@
   top: 0px;
   right: 0px;
   bottom: 0px;
+  transition: 0ms;
   opacity: 0;
-  transition: 250ms;
 }
 .poster.active {
+  transition: 0ms var(--cubic) 400ms;
   opacity: 0.4;
+  -webkit-animation: 50ms linear 450ms alternate poster;
+          animation: 50ms linear 450ms alternate poster;
 }
 .poster.valid {
   opacity: 0.7;
@@ -1673,6 +1676,34 @@ iframe {
   }
   100% {
     transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes poster {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-10px, 0px);
+  }
+  60% {
+    transform: translate(10px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes poster {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-10px, 0px);
+  }
+  60% {
+    transform: translate(10px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
   }
 }
 @-webkit-keyframes preloader-top {

@@ -77,10 +77,12 @@
   top: 0px;
   right: 0px;
   bottom: 0px;
+  transition: 0ms;
   opacity: 0;
-  transition: 250ms;
   &.active {
+    transition: 0ms var(--cubic) 400ms;
     opacity: 0.4;
+    animation: 50ms linear 450ms alternate poster;
   }
   &.valid {
     opacity: 0.7;

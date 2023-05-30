@@ -6,6 +6,6 @@ const heroSwiper = new Swiper('.heroSwiper', {
   loop: true,
   speed: 2000,
   autoplay: {
-    delay: 5000,
+    delay: 2000,
   },
 });
