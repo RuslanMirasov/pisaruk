@@ -1,9 +1,40 @@
 <!--section Contacts-->
 <section class="section section--contacts">
   <div class="container">
-    <div class="title-wrapp">
-      <h1 class="title">Контакты</h1>
-    </div>
+    <h1 hidden>Контакты</h1>
+    <form action="#" method="POST" class="form" autocomplete="off" novalidate>
+      <input type="hidden" name="subject" class="subject" value="Заявка" />
+      <!-- name -->
+      <label class="label label--haf">
+        <input type="text" class="input" name="name" placeholder="ФИО" required />
+      </label>
+      <!-- Email -->
+      <label class="label label--haf">
+        <input type="email" class="input" name="email" placeholder="Электронная почта" required />
+      </label>
+      <label class="label">
+        <textarea class="input textarea" name="text" id="" cols="30" rows="10" placeholder="Текст" required></textarea>
+      </label>
+      <!-- submit -->
+      <button type="submit" class="button button--submit">Отправить</button>
+    </form>
   </div>
 </section>
 <!--section Hero end-->
+
+<!--footer-->
+<footer class="footer">
+  <div class="contacts">
+    <address class="address">
+      <a href="tel:+79167877333" class="address__link">+7 916 787-73-33</a>
+      <a href="email:mrpisaruk@yandex.ru" class="address__link">mrpisaruk@yandex.ru</a>
+      <a href="#!" class="address__link" target="_blank">Instagram</a>
+    </address>
+    <ul class="footer__links">
+      <li><a href="#!" target="_blank">IMDB</a></li>
+      <li><a href="#!" target="_blank">Кинопоиск</a></li>
+      <li><a href="#!" target="_blank">Кинотеатр</a></li>
+    </ul>
+  </div>
+</footer>
+<!--footer end-->

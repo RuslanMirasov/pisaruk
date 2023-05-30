@@ -41,3 +41,11 @@
     pointer-events: none;
   }
 }
+@media screen and (max-width: 1023px) {
+  .button {
+    font-size: 16px;
+    line-height: calc(32 / 16);
+    max-width: 150px;
+    padding: 4px 20px;
+  }
+}
