@@ -99,7 +99,6 @@
 .container {
   position: relative;
   margin: 0 auto;
-  padding: 0px 20px;
   max-width: 1280px;
 }
 
@@ -108,6 +107,18 @@
   overflow-x: hidden;
   overflow-y: auto;
   padding: 20px 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .section {
+    padding-left: calc(15px + 25 * ((100vw - 320px) / 960));
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .section {
+    padding-right: calc(15px + 25 * ((100vw - 320px) / 960));
+  }
 }
 
 /*----------------------------------------------- TYPOGRAPHY */
@@ -156,16 +167,6 @@
 @media only screen and (max-width: 1439px) and (min-width: 0px) and (max-width: 1280px) {
   .title.title--h1 {
     line-height: calc(50px + 30 * ((100vw - 320px) / 960));
-  }
-}
-@media screen and (max-width: 767px) {
-  .title.title--h2 {
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .title.title--h2 {
-    font-size: 32px;
   }
 }
 
@@ -861,9 +862,6 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .section--contacts .form .label.label--haf {
-    width: 100%;
-  }
   .section--contacts .form .input.textarea {
     height: 100px;
     line-height: 20px;
@@ -886,6 +884,155 @@
   .footer__links {
     width: 100%;
     margin-top: 30px;
+  }
+  .section--contacts .form .label.label--haf {
+    width: 100%;
+  }
+}
+.film-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.film-group__list {
+  width: 94%;
+}
+.film-group__list > li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.film-group__list > li a {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 5;
+  cursor: pointer;
+}
+.film-group__list > li:hover .filmTitle, .film-group__list > li:focus .filmTitle {
+  opacity: 0.4;
+}
+
+.film-group__year {
+  display: inline-block;
+  width: 6%;
+  font-size: 12px;
+  line-height: 62px;
+  padding: 10px 0px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .film-group__year {
+    font-size: calc(10px + 2 * ((100vw - 320px) / 960));
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .film-group__year {
+    line-height: calc(32px + 30 * ((100vw - 320px) / 960));
+  }
+}
+
+.filmTitle {
+  max-width: 79%;
+  font-family: "coco_ultralight", verdana;
+  font-weight: normal;
+  padding: 10px 0px;
+  opacity: 1;
+  transition: 250ms var(--cubic);
+  font-size: 62px;
+  line-height: 62px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .filmTitle {
+    font-size: calc(32px + 30 * ((100vw - 320px) / 960));
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .filmTitle {
+    line-height: calc(32px + 30 * ((100vw - 320px) / 960));
+  }
+}
+@media screen and (max-width: 767px) {
+  .filmTitle {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.filmInfo {
+  text-align: right;
+}
+.filmInfo li {
+  font-size: 12px;
+  line-height: 15px;
+  color: #aaa9a9;
+}
+.filmInfo li span {
+  opacity: 1;
+  color: #fff;
+}
+
+@media screen and (max-width: 1439px) {
+  .filmTitle {
+    font-size: 52px;
+    line-height: 52px;
+  }
+  .film-group__year {
+    line-height: 52px;
+  }
+}
+@media screen and (max-width: 1365px) {
+  .film-group__year {
+    line-height: 42px;
+    width: 8%;
+  }
+  .film-group__list {
+    width: 92%;
+  }
+  .filmTitle {
+    font-size: 42px;
+    line-height: 42px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .film-group__year {
+    line-height: 32px;
+    width: 8%;
+  }
+  .film-group__list {
+    width: 92%;
+  }
+  .filmTitle {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .film-group__year {
+    width: 15%;
+  }
+  .film-group__list {
+    width: 85%;
+  }
+  .filmInfo {
+    text-align: left;
+  }
+  .film-group__list > li {
+    margin: 5px 0px;
+  }
+  .film-group__year {
+    margin: 5px 0px;
+  }
+  .film-groups {
+    margin-top: -5px;
+    margin-bottom: -5px;
   }
 }
 /*----------------------------------------------- BUTTONS*/

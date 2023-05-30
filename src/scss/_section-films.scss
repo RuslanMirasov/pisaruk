@@ -1,0 +1,130 @@
+.film-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.film-group__list {
+  width: 94%;
+  > li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    a {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      z-index: 5;
+      cursor: pointer;
+    }
+    &:hover,
+    &:focus {
+      .filmTitle {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.film-group__year {
+  display: inline-block;
+  width: 6%;
+  @include css-r('font-size', 12, 10, 1);
+  @include css-r('line-height', 62, 32, 1);
+  padding: 10px 0px;
+}
+
+.filmTitle {
+  max-width: 79%;
+  font-family: 'coco_ultralight', verdana;
+  font-weight: normal;
+  padding: 10px 0px;
+  opacity: 1;
+  transition: 250ms var(--cubic);
+  @include css-r('font-size', 62, 32, 1);
+  @include css-r('line-height', 62, 32, 1);
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.filmInfo {
+  text-align: right;
+  li {
+    font-size: 12px;
+    line-height: 15px;
+    color: #aaa9a9;
+    span {
+      opacity: 1;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .filmTitle {
+    font-size: 52px;
+    line-height: 52px;
+  }
+  .film-group__year {
+    line-height: 52px;
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  .film-group__year {
+    line-height: 42px;
+    width: 8%;
+  }
+  .film-group__list {
+    width: 92%;
+  }
+  .filmTitle {
+    font-size: 42px;
+    line-height: 42px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .film-group__year {
+    line-height: 32px;
+    width: 8%;
+  }
+  .film-group__list {
+    width: 92%;
+  }
+  .filmTitle {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .film-group__year {
+    width: 15%;
+  }
+  .film-group__list {
+    width: 85%;
+  }
+  .filmInfo {
+    text-align: left;
+  }
+  .film-group__list > li {
+    margin: 5px 0px;
+  }
+  .film-group__year {
+    margin: 5px 0px;
+  }
+  .film-groups {
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+}

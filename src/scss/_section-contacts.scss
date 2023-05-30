@@ -70,11 +70,6 @@
 @media screen and (max-width: 1023px) {
   .section--contacts {
     .form {
-      .label {
-        &.label--haf {
-          width: 100%;
-        }
-      }
       .input {
         &.textarea {
           height: 100px;
@@ -103,5 +98,14 @@
   .footer__links {
     width: 100%;
     margin-top: 30px;
+  }
+  .section--contacts {
+    .form {
+      .label {
+        &.label--haf {
+          width: 100%;
+        }
+      }
+    }
   }
 }

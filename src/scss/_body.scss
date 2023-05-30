@@ -42,7 +42,6 @@
 .container {
   position: relative;
   margin: 0 auto;
-  padding: 0px 20px;
   max-width: 1280px;
 }
 
@@ -51,4 +50,6 @@
   overflow-x: hidden;
   overflow-y: auto;
   padding: 20px 0px;
+  @include css-r('padding-left', 40, 15, 1);
+  @include css-r('padding-right', 40, 15, 1);
 }
