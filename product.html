@@ -11,21 +11,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     
     
-    <script type="module" crossorigin src="/pisaruk/assets/sendmail-fb8b1857.js"></script>
-    <link rel="stylesheet" href="/pisaruk/assets/sendmail-b8f3038e.css">
+    <script type="module" crossorigin src="/pisaruk/assets/sendmail-2bb76978.js"></script>
+    <link rel="stylesheet" href="/pisaruk/assets/sendmail-521c6de8.css">
   </head>
   <body class="body">
     <!-- preloader -->
 <div class="preloader">
   <div class="preloaderLogo">
-    <svg class="rotate-animation2"><use href="/pisaruk/assets/icons-15607963.svg#preloader"></use></svg>
+    <svg class="rotate-animation"><use href="/pisaruk/assets/icons-15607963.svg#preloader"></use></svg>
   </div>
 </div>
 
-<div class="whiteFrameWrapper"><div class="whiteFrame"></div></div>
+<div class="whiteFrameWrapper" data-animation="fade-in" data-delay="300"><div class="whiteFrame"></div></div>
 
     <main class="main">
-      <div class="heroSlider heroSlider--poster">
+      <div class="heroSlider heroSlider--poster" data-animation="fade-in" data-delay="1000">
   <img src="/pisaruk/assets/7-e6700748.jpg" alt="Название фильма" width="1280" class="poster valid" data-id="0001" />
 </div>
 
@@ -33,8 +33,8 @@
 <div class="headerWrapper">
   <header class="header">
     <div class="container">
-      <a href="./" class="logo">Дмитрий Писарук</a>
-      <div class="menu-backdrop">
+      <a href="./" class="logo" data-animation="fade-in">Дмитрий Писарук</a>
+      <div class="menu-backdrop" data-animation="fade-in" data-delay="600">
         <button type="button" class="close-area" data-menu-open></button>
         <div class="menu-body">
           <nav class="menu">
@@ -68,31 +68,30 @@
 <!--header end-->
 
       <!--section Product-->
-<section class="section section--hero">
+<section class="section section--product" data-animation="fade-in" data-delay="800">
   <div class="container">
-    <h1 hidden>Название фильма</h1>
     <button type="button" class="play" data-popup="video|https://vimeo.com/255295760">
       <svg width="37" height="60" class="play__border"><use href="/pisaruk/assets/icons-15607963.svg#play_border"></use></svg>
       <svg width="37" height="60" class="play__center"><use href="/pisaruk/assets/icons-15607963.svg#play"></use></svg>
     </button>
-  </div>
-</section>
-<!--section Hero end-->
-
-<!--footer-->
-<div class="footerWrapper">
-  <footer class="footer">
-    <div class="contacts">
-      <address class="address"></address>
+    <div class="product-info">
+      <div class="product-info__title">
+        <h1 class="title">Название фильма</h1>
+        <ul class="filmInfo">
+          <li>Роль: <span>Исп. продюсер</span></li>
+          <li>Режиссер: <span>Д. Черкасов</span></li>
+          <li>Россия 1</li>
+        </ul>
+      </div>
       <ul class="footer__links">
         <li><a href="#!" target="_blank">IMDB</a></li>
         <li><a href="#!" target="_blank">Кинопоиск</a></li>
         <li><a href="#!" target="_blank">Кинотеатр</a></li>
       </ul>
     </div>
-  </footer>
-</div>
-<!--footer end-->
+  </div>
+</section>
+<!--section Hero end-->
 
     </main>
     <!-- backdrop -->
@@ -124,7 +123,7 @@
           <input type="email" class="input" name="email" placeholder="E-mail" required />
         </label>
         <!-- submit -->
-        <button type="submit" class="button full button--submit">Send</button>
+        <button type="submit" class="button full button--submit"><span>Send</span></button>
       </form>
     </div>
   </div>
@@ -145,7 +144,7 @@
       <button class="popup__close" data-popup-close></button>
       <b class="popup-title">Заявка отправлена!</b>
       <p class="popup-subtitle">Наш менеджер свяжется с <br />Вами в ближайшее время</p>
-      <button type="button" data-popup-close class="button">ОК</button>
+      <button type="button" data-popup-close class="button"><span>ОК</span></button>
     </div>
   </div>
 </div>

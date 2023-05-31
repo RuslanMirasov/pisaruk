@@ -11,21 +11,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     
     
-    <script type="module" crossorigin src="/pisaruk/assets/sendmail-fb8b1857.js"></script>
-    <link rel="stylesheet" href="/pisaruk/assets/sendmail-b8f3038e.css">
+    <script type="module" crossorigin src="/pisaruk/assets/sendmail-2bb76978.js"></script>
+    <link rel="stylesheet" href="/pisaruk/assets/sendmail-521c6de8.css">
   </head>
   <body class="body">
     <!-- preloader -->
 <div class="preloader">
   <div class="preloaderLogo">
-    <svg class="rotate-animation2"><use href="/pisaruk/assets/icons-15607963.svg#preloader"></use></svg>
+    <svg class="rotate-animation"><use href="/pisaruk/assets/icons-15607963.svg#preloader"></use></svg>
   </div>
 </div>
 
-<div class="whiteFrameWrapper"><div class="whiteFrame"></div></div>
+<div class="whiteFrameWrapper" data-animation="fade-in" data-delay="300"><div class="whiteFrame"></div></div>
 
     <main class="main">
-      <div class="heroSlider">
+      <div class="heroSlider" data-animation="fade-in" data-delay="1000">
   <div class="swiper heroSwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="/pisaruk/assets/slide1-06a3dcb5.jpg" alt="Дмитрий Писарук" width="1280" class="heroImage" /></div>
@@ -39,8 +39,8 @@
 <div class="headerWrapper">
   <header class="header">
     <div class="container">
-      <a href="./" class="logo">Дмитрий Писарук</a>
-      <div class="menu-backdrop">
+      <a href="./" class="logo" data-animation="fade-in">Дмитрий Писарук</a>
+      <div class="menu-backdrop" data-animation="fade-in" data-delay="600">
         <button type="button" class="close-area" data-menu-open></button>
         <div class="menu-body">
           <nav class="menu">
@@ -74,10 +74,10 @@
 <!--header end-->
 
       <!--section Hero-->
-<section class="section section--hero">
+<section class="section section--hero" data-animation="fade-in" data-delay="800">
   <div class="container">
     <div class="title-wrapp">
-      <h1 class="title title--h1">Дмитрий Писарук</h1>
+      <h1 class="title title--h1" data-animation data-delay="800">Дмитрий Писарук</h1>
       <p class="subtitle" data-popup="request">продюсер</p>
     </div>
     <button type="button" class="play" data-popup="video|https://vimeo.com/255295760">
@@ -89,7 +89,7 @@
 <!--section Hero end-->
 
       <!--footer-->
-<div class="footerWrapper">
+<div class="footerWrapper" data-animation="fade-in" data-delay="600">
   <footer class="footer">
     <ul class="socials">
       <li>
@@ -133,7 +133,7 @@
           <input type="email" class="input" name="email" placeholder="E-mail" required />
         </label>
         <!-- submit -->
-        <button type="submit" class="button full button--submit">Send</button>
+        <button type="submit" class="button full button--submit"><span>Send</span></button>
       </form>
     </div>
   </div>
@@ -154,7 +154,7 @@
       <button class="popup__close" data-popup-close></button>
       <b class="popup-title">Заявка отправлена!</b>
       <p class="popup-subtitle">Наш менеджер свяжется с <br />Вами в ближайшее время</p>
-      <button type="button" data-popup-close class="button">ОК</button>
+      <button type="button" data-popup-close class="button"><span>ОК</span></button>
     </div>
   </div>
 </div>
