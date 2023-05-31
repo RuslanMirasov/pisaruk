@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', event => {
         if (btn != undefined) {
           document.querySelector('#request .button[type="submit"]').innerHTML = btn;
         } else {
-          document.querySelector('#request .button[type="submit"]').innerHTML = defaultPopupInfo[4];
+          document.querySelector('#request .button[type="submit"]').innerHTML = `<span>${defaultPopupInfo[4]}</span>`;
         }
       }
     } else if (id == 'video' && subject != '') {

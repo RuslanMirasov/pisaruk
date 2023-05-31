@@ -7,11 +7,26 @@
 
   .clients__item {
     width: 17.5%;
+    opacity: 0;
+    transition: 1000ms var(--cubic) 800ms;
+    &:nth-child(2n) {
+      transition: 1000ms var(--cubic) 1000ms;
+    }
+    &:nth-child(3n) {
+      transition: 1000ms var(--cubic) 1200ms;
+    }
+    &:nth-child(4n) {
+      transition: 1000ms var(--cubic) 1400ms;
+    }
+    &.animate {
+      opacity: 1;
+    }
     img {
       transition: 250ms var(--cubic);
       filter: grayscale(100%);
     }
-    &:hover {
+    &:hover,
+    &:focus {
       img {
         filter: grayscale(0);
       }

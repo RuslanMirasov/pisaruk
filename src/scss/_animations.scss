@@ -57,9 +57,12 @@
 [data-animation='fade-top'],
 [data-animation='fade-bottom'] {
   opacity: 0;
-  transition: 0.8s cubic-bezier(0.14, 0.03, 0.02, 0.87) 0s;
+  transition: 0.8s var(--cubic);
   &.animate {
     transform: translate(0px, 0px);
     opacity: 1;
   }
+}
+[data-animation='fade-in'] {
+  transition: 1.5s var(--cubic);
 }

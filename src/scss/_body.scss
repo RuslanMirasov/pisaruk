@@ -38,8 +38,8 @@
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  @include css-r('padding-top', 130, 76, 1);
-  @include css-r('padding-bottom', 130, 76, 1);
+  @include css-r('padding-top', 110, 70, 1);
+  @include css-r('padding-bottom', 110, 70, 1);
   @include css-r('padding-left', 40, 15, 1);
   @include css-r('padding-right', 40, 15, 1);
 }

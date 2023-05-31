@@ -17,6 +17,15 @@
   font-family: 'coco_ultralight', verdana;
   font-weight: normal;
   &.title--h1 {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    letter-spacing: 10px;
+    transition: 1.4s var(--cubic);
+    &.animate {
+      transform: translate(-50%, 0%);
+      letter-spacing: 0px;
+    }
     @include css-r('font-size', 120, 50, 1);
     @include css-r('line-height', 120, 50, 1);
     @media screen and (max-width: 1439px) {

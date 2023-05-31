@@ -15,6 +15,7 @@
 
 .button {
   display: inline-flex;
+  position: relative;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -26,11 +27,32 @@
   padding: 10px 20px;
   background: var(--button-color);
   color: #000;
-  transition: 250ms var(--cubic);
+  transition: 400ms var(--cubic);
+  overflow: hidden;
   cursor: pointer;
+  span {
+    font-family: 'coco_light', verdana;
+    position: relative;
+    z-index: 1;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: #424242;
+    z-index: 0;
+    transition: 400ms var(--cubic);
+    transform: skewX(30deg) translate(-110%, 0%);
+  }
   &:hover,
   &:focus {
-    background: var(--button-color-hover);
+    color: #fff;
+    &:before {
+      transform: skewX(0deg) translate(0%, 0%) rotate(0deg);
+    }
   }
   &.full {
     max-width: 100%;
