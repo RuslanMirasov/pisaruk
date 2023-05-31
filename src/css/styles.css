@@ -785,6 +785,10 @@
     width: 31.25%;
   }
 }
+.section--contacts {
+  padding-top: 70px;
+  padding-bottom: 200px;
+}
 .section--contacts .form {
   display: flex;
   width: 100%;
@@ -796,6 +800,7 @@
   width: 100%;
 }
 .section--contacts .form .label.label--haf {
+  margin-top: 0px;
   width: 46%;
 }
 .section--contacts .form .input.textarea {
@@ -871,11 +876,16 @@
 }
 @media screen and (max-width: 569px) {
   .footer__links {
-    width: 100%;
+    width: auto;
     margin-top: 30px;
+    margin-left: auto;
   }
   .section--contacts .form .label.label--haf {
     width: 100%;
+    margin-top: 10px;
+  }
+  .section--contacts .form .label.label--haf:first-child {
+    margin-top: 0px;
   }
 }
 .film-group {

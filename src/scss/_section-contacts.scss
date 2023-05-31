@@ -1,4 +1,6 @@
 .section--contacts {
+  padding-top: 70px;
+  padding-bottom: 200px;
   .form {
     display: flex;
     width: 100%;
@@ -8,6 +10,7 @@
     .label {
       width: 100%;
       &.label--haf {
+        margin-top: 0px;
         width: 46%;
       }
     }
@@ -96,14 +99,19 @@
 }
 @media screen and (max-width: 569px) {
   .footer__links {
-    width: 100%;
+    width: auto;
     margin-top: 30px;
+    margin-left: auto;
   }
   .section--contacts {
     .form {
       .label {
         &.label--haf {
           width: 100%;
+          margin-top: 10px;
+          &:first-child {
+            margin-top: 0px;
+          }
         }
       }
     }

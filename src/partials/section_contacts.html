@@ -3,7 +3,6 @@
   <div class="container">
     <h1 hidden>Контакты</h1>
     <form action="#" method="POST" class="form" autocomplete="off" novalidate>
-      <input type="hidden" name="subject" class="subject" value="Заявка" />
       <!-- name -->
       <label class="label label--haf">
         <input type="text" class="input" name="name" placeholder="ФИО" required />
@@ -16,6 +15,7 @@
         <textarea class="input textarea" name="text" id="" cols="30" rows="10" placeholder="Текст" required></textarea>
       </label>
       <!-- submit -->
+      <input type="hidden" name="subject" class="subject" value="Заявка" />
       <button type="submit" class="button button--submit">Отправить</button>
     </form>
   </div>
