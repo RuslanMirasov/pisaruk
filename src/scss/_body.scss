@@ -1,15 +1,20 @@
+html {
+  height: 100%;
+}
 .body {
   display: inline-flex;
   flex-wrap: wrap;
   align-content: space-between;
   width: 100%;
-  height: auto;
-  min-height: 100vh;
+  height: 100%;
   font-family: 'coco_ultralight', verdana;
   font-size: 12px;
   line-height: calc(16 / 12);
   color: #fff;
   background-color: #000;
+  // width: 100%;
+  // height: auto;
+  // min-height: 100vh;
 
   &.lock {
     overflow-x: hidden;
@@ -23,9 +28,10 @@
   justify-content: center;
   box-sizing: border-box;
   position: relative;
-  min-height: 100vh;
+  height: 100%;
   @include css-r('padding', 40, 15, 1);
   z-index: 2;
+  // min-height: 100vh;
 }
 
 .container {
