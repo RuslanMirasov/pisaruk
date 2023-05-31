@@ -1,25 +1,28 @@
 document.addEventListener('DOMContentLoaded', event => {
   const amimateElements = document.querySelectorAll('[data-animation]');
+  const screenGap = 150;
   let windowHeight = window.innerHeight;
-  let scroll = window.scrollY;
   window.addEventListener('scroll', () => {
-    scroll = window.scrollY;
     windowHeight = window.innerHeight;
     animate();
   });
-
+  window.addEventListener('load', () => {
+    setTimeout(function () {
+      animate();
+    }, 300);
+  });
   function animate() {
     amimateElements.forEach(element => {
+      const animationRepeat = element.dataset.repeat;
       const elementScrolltop = element.getBoundingClientRect().top;
       const elementScrollbottom = elementScrolltop + element.offsetHeight;
-      if (elementScrollbottom > 50 || elementScrollbottom > 50) {
-        element.style.backgroundColor = 'green';
+      if (elementScrollbottom > screenGap && elementScrolltop < windowHeight - screenGap) {
+        element.classList.add('animate');
       } else {
-        element.style.backgroundColor = 'tomato';
+        if (animationRepeat !== undefined) {
+          element.classList.remove('animate');
+        }
       }
-      console.log(`${elementScrollbottom}`);
     });
   }
-
-  animate();
 });

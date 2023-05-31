@@ -39,21 +39,25 @@
 }
 
 /*standatr animations*/
-.animation {
+[data-animation='fade-left'] {
+  transform: translate(-20px, 0px);
+}
+[data-animation='fade-right'] {
+  transform: translate(20px, 0px);
+}
+[data-animation='fade-top'] {
+  transform: translate(0px, -20px);
+}
+[data-animation='fade-bottom'] {
+  transform: translate(0px, 20px);
+}
+[data-animation='fade-in'],
+[data-animation='fade-left'],
+[data-animation='fade-right'],
+[data-animation='fade-top'],
+[data-animation='fade-bottom'] {
   opacity: 0;
   transition: 0.8s cubic-bezier(0.14, 0.03, 0.02, 0.87) 0s;
-  &.anim--top {
-    transform: translate(0px, -20px);
-  }
-  &.anim--bottom {
-    transform: translate(0px, 20px);
-  }
-  &.anim--right {
-    transform: translate(20px, 0px);
-  }
-  &.anim--left {
-    transform: translate(-20px, 0px);
-  }
   &.animate {
     transform: translate(0px, 0px);
     opacity: 1;
