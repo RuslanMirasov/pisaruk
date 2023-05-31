@@ -804,16 +804,14 @@
     width: 31.25%;
   }
 }
-.section--contacts {
-  padding-top: 70px;
-  padding-bottom: 200px;
-}
 .section--contacts .form {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  max-width: 1280px;
+  margin: auto;
 }
 .section--contacts .form .label {
   width: 100%;
@@ -839,6 +837,12 @@
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
+  margin-top: 100px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .contacts {
+    margin-top: calc(30px + 70 * ((100vw - 320px) / 960));
+  }
 }
 .contacts a {
   font-size: 24px;
@@ -855,7 +859,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  gap: 34px;
+  gap: 30px;
 }
 .footer__links a {
   font-size: 24px;
@@ -890,6 +894,9 @@
   }
   .section--contacts .button {
     margin-top: 24px;
+  }
+  .contacts {
+    gap: 20px;
   }
   .contacts a {
     font-size: 16px;
@@ -1087,26 +1094,113 @@
     margin-bottom: -5px;
   }
 }
-.section.section--product {
+.section.section--auto {
   height: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+  padding-top: 140px;
 }
-.section.section--product .container {
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .section.section--auto {
+    padding-bottom: calc(20px + 10 * ((100vw - 320px) / 960));
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .section.section--auto {
+    padding-top: calc(75px + 65 * ((100vw - 320px) / 960));
+  }
+}
+.section.section--auto .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 100%;
   height: 100%;
+  max-width: 100%;
 }
-.section.section--product .play {
+.section.section--auto .play {
   margin: auto;
 }
-.section.section--product .title-wrapp {
+.section.section--auto .title-wrapp {
   display: inline-flex;
   flex-wrap: wrap;
   width: auto;
 }
+.section.section--auto .footer__links {
+  margin-top: 0px;
+}
 
+.product-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .product-info {
+    margin-top: calc(25px + 15 * ((100vw - 320px) / 960));
+  }
+}
+
+.product-info__title {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 70%;
+  gap: 24px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .product-info__title {
+    gap: calc(10px + 14 * ((100vw - 320px) / 960));
+  }
+}
+.product-info__title .title {
+  font-size: 60px;
+  line-height: 1;
+  display: block;
+  width: 100%;
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .product-info__title .title {
+    font-size: calc(32px + 28 * ((100vw - 320px) / 960));
+  }
+}
+.product-info__title .filmInfo {
+  text-align: left;
+  display: inline-flex;
+  width: auto;
+  gap: 0px 30px;
+}
+
+@media screen and (max-width: 1365px) {
+  .product-info__title {
+    max-width: 56%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .product-info__title {
+    max-width: 62%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .product-info__title {
+    max-width: 62%;
+  }
+  .product-info .footer__links {
+    margin-left: auto;
+  }
+  .product-info__title .filmInfo {
+    gap: 0px;
+    flex-direction: column;
+  }
+  .product-info__title {
+    max-width: 250px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .product-info__title {
+    max-width: 100%;
+  }
+}
 /*----------------------------------------------- BUTTONS*/
 .forBtn {
   display: flex;
@@ -1827,7 +1921,7 @@ iframe {
 [data-animation=fade-top],
 [data-animation=fade-bottom] {
   opacity: 0;
-  transition: 0.8s var(--cubic);
+  transition: opacity 0.8s var(--cubic), transform 0.8s var(--cubic);
 }
 [data-animation=fade-in].animate,
 [data-animation=fade-left].animate,
@@ -1839,5 +1933,5 @@ iframe {
 }
 
 [data-animation=fade-in] {
-  transition: 1.5s var(--cubic);
+  transition: opacity 1.5s var(--cubic);
 }

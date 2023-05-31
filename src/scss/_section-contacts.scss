@@ -1,12 +1,14 @@
 .section--contacts {
-  padding-top: 70px;
-  padding-bottom: 200px;
+  // padding-top: 70px;
+  // padding-bottom: 200px;
   .form {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    max-width: 1280px;
+    margin: auto;
     .label {
       width: 100%;
       &.label--haf {
@@ -35,6 +37,7 @@
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
+  @include css-r('margin-top', 100, 30, 1);
   a {
     font-size: 24px;
     line-height: calc(32 / 24);
@@ -52,7 +55,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  gap: 34px;
+  gap: 30px;
   a {
     font-size: 24px;
     line-height: calc(32 / 24);
@@ -96,6 +99,7 @@
     }
   }
   .contacts {
+    gap: 20px;
     a {
       font-size: 16px;
       line-height: calc(24 / 16);
