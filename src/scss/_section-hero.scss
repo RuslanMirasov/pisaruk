@@ -47,6 +47,9 @@
   .container {
     text-align: center;
   }
+  .title-wrapp {
+    @include css-r('margin-bottom', 70, 28, 1);
+  }
   .title {
     margin-top: 2%;
     @media screen and (max-width: 767px) {
@@ -60,14 +63,12 @@
   @include css-r('width', 182, 120, 1);
   @include css-r('height', 182, 120, 1);
   margin: 0 auto;
-  @include css-r('margin-top', 70, 28, 1);
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
   @media screen and (max-width: 1439px) {
     @include css-r('width', 150, 120, 1);
     @include css-r('height', 150, 120, 1);
-    @include css-r('margin-top', 50, 28, 1);
   }
   svg {
     display: block;

@@ -678,6 +678,14 @@
 .section--hero .container {
   text-align: center;
 }
+.section--hero .title-wrapp {
+  margin-bottom: 70px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1280px) {
+  .section--hero .title-wrapp {
+    margin-bottom: calc(28px + 42 * ((100vw - 320px) / 960));
+  }
+}
 .section--hero .title {
   margin-top: 2%;
 }
@@ -696,7 +704,6 @@
   width: 182px;
   height: 182px;
   margin: 0 auto;
-  margin-top: 70px;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
@@ -711,16 +718,10 @@
     height: calc(120px + 62 * ((100vw - 320px) / 960));
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1280px) {
-  .play {
-    margin-top: calc(28px + 42 * ((100vw - 320px) / 960));
-  }
-}
 @media screen and (max-width: 1439px) {
   .play {
     width: 150px;
     height: 150px;
-    margin-top: 50px;
   }
 }
 @media only screen and (max-width: 1439px) and (min-width: 0px) and (max-width: 1280px) {
@@ -731,11 +732,6 @@
 @media only screen and (max-width: 1439px) and (min-width: 0px) and (max-width: 1280px) {
   .play {
     height: calc(120px + 30 * ((100vw - 320px) / 960));
-  }
-}
-@media only screen and (max-width: 1439px) and (min-width: 0px) and (max-width: 1280px) {
-  .play {
-    margin-top: calc(28px + 22 * ((100vw - 320px) / 960));
   }
 }
 .play svg {
