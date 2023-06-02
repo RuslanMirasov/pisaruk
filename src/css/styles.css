@@ -44,7 +44,7 @@ html {
   flex-wrap: wrap;
   align-content: space-between;
   width: 100%;
-  height: 100%;
+  height: auto;
   font-family: "coco_ultralight", verdana;
   font-size: 12px;
   line-height: 1.3333333333;

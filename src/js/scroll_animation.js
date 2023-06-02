@@ -4,20 +4,38 @@ data-repeat              - если есть, повторяет анимаци�
 data-delay="500"         - задержка анимации в милисекундах
 */
 document.addEventListener('DOMContentLoaded', event => {
-  const amimateElements = document.querySelectorAll('[data-animation]');
-  const thumbnail = document.querySelectorAll('.post-thumbnail');
-  const screenGap = 50;
+  const body = document.querySelector('.body');
   let delay = 0;
   let windowHeight = window.innerHeight;
+  let bodyHeight = body.offsetHeight;
+  const amimateElements = document.querySelectorAll('[data-animation]');
+  const screenGap = 50;
+
   window.addEventListener('scroll', () => {
     windowHeight = window.innerHeight;
     animate();
   });
   window.addEventListener('load', () => {
     setTimeout(function () {
+      bodyModifyHeight();
       animate();
     }, 300);
   });
+  window.addEventListener('resize', () => {
+    windowHeight = window.innerHeight;
+    bodyModifyHeight();
+  });
+
+  function bodyModifyHeight() {
+    bodyHeight = body.offsetHeight;
+    if (bodyHeight < windowHeight) {
+      body.style.height = windowHeight + 'px';
+    } else {
+      body.style.height = 'auto';
+    }
+    console.log(bodyHeight);
+  }
+
   function animate() {
     amimateElements.forEach(element => {
       const animationRepeat = element.dataset.repeat;
