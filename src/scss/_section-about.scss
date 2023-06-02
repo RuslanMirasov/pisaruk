@@ -1,0 +1,101 @@
+.article article {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  @include css-r('gap', 50, 24, 1);
+  p {
+    display: inline-block;
+    width: 100%;
+    @include css-r('font-size', 42, 20, 1);
+    @include css-r('line-height', 62, 28, 1);
+    font-family: 'coco_ultralight';
+    font-weight: normal;
+    b,
+    strong {
+      display: inline-block;
+      width: auto;
+      font-family: 'coco_light';
+    }
+    a {
+      display: inline-block;
+      width: auto;
+      border-bottom: 1px solid #fff;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      &.aligncenter {
+        margin: 0 auto;
+      }
+      &.alignleft {
+        margin-right: auto;
+      }
+      &.alignright {
+        margin-left: auto;
+      }
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'coco_light';
+    font-weight: normal;
+    display: inline-block;
+    width: 100%;
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+    @include css-r('font-size', 60, 24, 1);
+    @include css-r('line-height', 60, 26, 1);
+  }
+  h1 {
+    padding-top: 0.5em;
+    @include css-r('font-size', 100, 26, 1);
+    @include css-r('line-height', 100, 28, 1);
+    strong {
+      @include css-r('font-size', 230, 52, 1);
+      @include css-r('line-height', 230, 52, 1);
+      font-weight: normal;
+    }
+  }
+  ul,
+  ol {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    li {
+      width: 100%;
+      @include css-r('font-size', 38, 18, 1);
+      @include css-r('line-height', 58, 24, 1);
+      position: relative;
+      @include css-r('padding-left', 42, 22, 1);
+      &:before {
+        content: '';
+        @include css-r('width', 10, 5, 1);
+        @include css-r('height', 10, 5, 1);
+        border-radius: 10px;
+        position: absolute;
+        left: 0px;
+        border: 1px solid #fff;
+        top: 0.65em;
+      }
+    }
+  }
+}
+
+.post-thumbnail {
+  display: block;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  img {
+    display: block;
+    width: 100%;
+  }
+}

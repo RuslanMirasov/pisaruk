@@ -5,6 +5,7 @@ data-delay="500"         - задержка анимации в милисеку
 */
 document.addEventListener('DOMContentLoaded', event => {
   const amimateElements = document.querySelectorAll('[data-animation]');
+  const thumbnail = document.querySelectorAll('.post-thumbnail');
   const screenGap = 50;
   let delay = 0;
   let windowHeight = window.innerHeight;
