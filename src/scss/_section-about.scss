@@ -41,11 +41,12 @@
     font-weight: normal;
     display: inline-block;
     width: 100%;
-    color: rgba(0, 0, 0, 0);
+
     @include css-r('font-size', 60, 24, 1);
     @include css-r('line-height', 60, 26, 1);
   }
   h1 {
+    color: rgba(0, 0, 0, 0);
     font-family: 'coco_light';
     -webkit-text-stroke: 1px #ffffff;
     text-stroke: 1px #ffffff;
