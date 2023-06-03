@@ -4,7 +4,7 @@ data-repeat              - если есть, повторяет анимаци�
 data-delay="500"         - задержка анимации в милисекундах
 */
 document.addEventListener('DOMContentLoaded', event => {
-  const body = document.querySelector('.body');
+  // const body = document.querySelector('.body');
   const article = document.querySelector('.page');
   if (article && article.hasChildNodes()) {
     // Таким образом, сначала мы проверяем, не пуст ли объект, есть ли у него дети
@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', event => {
   const screenGap = 50;
 
   window.addEventListener('scroll', () => {
-    bodyModifyHeight();
     animate();
   });
   window.addEventListener('load', () => {
@@ -34,10 +33,6 @@ document.addEventListener('DOMContentLoaded', event => {
     windowHeight = window.innerHeight;
     animate();
   });
-
-  function bodyModifyHeight() {
-    document.querySelector('.logo').innerHTML = body.offsetHeight;
-  }
 
   function animate() {
     amimateElements.forEach(element => {
