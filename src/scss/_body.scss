@@ -63,5 +63,6 @@ html {
   @include css-r('top', 39, 14, 1);
   @include css-r('bottom', 39, 14, 1);
   @include css-r('left', 39, 14, 1);
+  background: rgba(236, 15, 15, 0.233);
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
