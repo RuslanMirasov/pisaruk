@@ -5,6 +5,16 @@ data-delay="500"         - задержка анимации в милисеку
 */
 document.addEventListener('DOMContentLoaded', event => {
   const body = document.querySelector('.body');
+  const article = document.querySelector('.page');
+  if (article && article.hasChildNodes()) {
+    // Таким образом, сначала мы проверяем, не пуст ли объект, есть ли у него дети
+    const articleElements = article.children;
+
+    for (var i = 0; i < articleElements.length; ++i) {
+      articleElements[i].setAttribute('data-animation', '');
+    }
+  }
+
   let delay = 0;
   let windowHeight = window.innerHeight;
   let bodyHeight = body.offsetHeight;
@@ -24,6 +34,7 @@ document.addEventListener('DOMContentLoaded', event => {
   window.addEventListener('resize', () => {
     windowHeight = window.innerHeight;
     bodyModifyHeight();
+    animate();
   });
 
   function bodyModifyHeight() {
@@ -33,7 +44,6 @@ document.addEventListener('DOMContentLoaded', event => {
     } else {
       body.style.height = 'auto';
     }
-    console.log(bodyHeight);
   }
 
   function animate() {

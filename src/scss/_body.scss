@@ -15,9 +15,6 @@ html {
   line-height: calc(16 / 12);
   color: #fff;
   background-color: #000;
-  // width: 100%;
-  // height: auto;
-  // min-height: 100vh;
 
   &.lock {
     overflow-x: hidden;
@@ -34,7 +31,6 @@ html {
   height: 100%;
   @include css-r('padding', 40, 15, 1);
   z-index: 2;
-  // min-height: 100vh;
 }
 
 .container {

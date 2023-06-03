@@ -4,19 +4,14 @@
   width: 100%;
   position: relative;
   @include css-r('gap', 50, 24, 1);
-  p {
+  p,
+  div {
     display: inline-block;
     width: 100%;
     @include css-r('font-size', 42, 20, 1);
     @include css-r('line-height', 62, 28, 1);
     font-family: 'coco_ultralight';
     font-weight: normal;
-    b,
-    strong {
-      display: inline-block;
-      width: auto;
-      font-family: 'coco_light';
-    }
     a {
       display: inline-block;
       width: auto;
@@ -42,22 +37,24 @@
   h4,
   h5,
   h6 {
-    font-family: 'coco_light';
+    font-family: 'coco_bold';
     font-weight: normal;
     display: inline-block;
     width: 100%;
     color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
     @include css-r('font-size', 60, 24, 1);
     @include css-r('line-height', 60, 26, 1);
   }
   h1 {
+    font-family: 'coco_light';
+    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px #ffffff;
     padding-top: 0.5em;
     @include css-r('font-size', 100, 26, 1);
     @include css-r('line-height', 100, 28, 1);
     strong {
-      @include css-r('font-size', 230, 52, 1);
-      @include css-r('line-height', 230, 52, 1);
+      @include css-r('font-size', 228, 52, 1);
+      @include css-r('line-height', 228, 52, 1);
       font-weight: normal;
     }
   }
@@ -85,17 +82,117 @@
       }
     }
   }
+  b,
+  strong {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    font-family: 'coco_light';
+  }
+  h1 {
+    strong {
+      transition: transform 2000ms var(--cubic) 3000ms, opacity 2000ms var(--cubic) 3000ms;
+      opacity: 0;
+      transform: perspective(400px) scale(1) translate(20%, 0%) rotateY(120deg);
+      will-change: transform;
+      perspective: 600px;
+      &:nth-child(1) {
+        transition: transform 2000ms var(--cubic) 0ms, opacity 2000ms var(--cubic) 0ms;
+      }
+      &:nth-child(2) {
+        transition: transform 2000ms var(--cubic) 200ms, opacity 2000ms var(--cubic) 200ms;
+      }
+      &:nth-child(3) {
+        transition: transform 2000ms var(--cubic) 400ms, opacity 2000ms var(--cubic) 400ms;
+      }
+      &:nth-child(4) {
+        transition: transform 2000ms var(--cubic) 600ms, opacity 2000ms var(--cubic) 600ms;
+      }
+      &:nth-child(5) {
+        transition: transform 2000ms var(--cubic) 800ms, opacity 2000ms var(--cubic) 800ms;
+      }
+      &:nth-child(6) {
+        transition: transform 2000ms var(--cubic) 1000ms, opacity 2000ms var(--cubic) 1000ms;
+      }
+      &:nth-child(7) {
+        transition: transform 2000ms var(--cubic) 1200ms, opacity 2000ms var(--cubic) 1200ms;
+      }
+      &:nth-child(8) {
+        transition: transform 2000ms var(--cubic) 1400ms, opacity 2000ms var(--cubic) 1400ms;
+      }
+      &:nth-child(9) {
+        transition: transform 2000ms var(--cubic) 1600ms, opacity 2000ms var(--cubic) 1600ms;
+      }
+      &:nth-child(10) {
+        transition: transform 2000ms var(--cubic) 1800ms, opacity 2000ms var(--cubic) 1800ms;
+      }
+    }
+    &.animate {
+      strong {
+        opacity: 1;
+        transform: perspective(400px) scale(1) translate(0%, 0%) rotateY(0deg);
+      }
+    }
+  }
+  p,
+  div,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol {
+    position: relative;
+    transition: 800ms var(--cubic);
+    opacity: 0;
+    transform: translate(0px, 50px);
+    &.animate {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+  }
 }
 
 .post-thumbnail {
   display: block;
-  width: 100%;
+  width: 100vw;
   position: fixed;
-  left: 0px;
-  bottom: 0px;
+  position: relative;
+  left: 50%;
+  @include css-r('bottom', -40, -15, 1);
+  transform: translate(-50%, 0%);
   z-index: -1;
+  opacity: 0.5;
+  margin-top: -100px;
   img {
     display: block;
     width: 100%;
+  }
+  &:before {
+    content: '';
+    width: 100%;
+    height: 30%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.postButtons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #fff;
+  padding: 20px 0px;
+  @include css-r('margin-top', 70, 24, 1);
+  .postButtons__icon {
+    display: block;
+    @include css-r('max-width', 114, 72, 1);
+    margin-right: 10px;
   }
 }

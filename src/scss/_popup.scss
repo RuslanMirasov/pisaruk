@@ -181,7 +181,7 @@
   .popup {
     max-width: 100%;
     background: rgba(0, 0, 0, 0);
-    padding: 6vh 6vh 6vh 6vh;
+    @include css-r('padding', 40, 15, 1);
     height: 100vh;
     transition: 500ms var(--cubic);
     transform: translate(0px, 0px) scale(1);

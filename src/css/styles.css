@@ -1220,7 +1220,8 @@ html {
     gap: calc(24px + 26 * ((100vw - 320px) / 1046));
   }
 }
-.article article p {
+.article article p,
+.article article div {
   display: inline-block;
   width: 100%;
   font-size: 42px;
@@ -1229,37 +1230,38 @@ html {
   font-weight: normal;
 }
 @media only screen and (min-width: 0px) and (max-width: 1366px) {
-  .article article p {
+  .article article p,
+.article article div {
     font-size: calc(20px + 22 * ((100vw - 320px) / 1046));
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 1366px) {
-  .article article p {
+  .article article p,
+.article article div {
     line-height: calc(28px + 34 * ((100vw - 320px) / 1046));
   }
 }
-.article article p b,
-.article article p strong {
-  display: inline-block;
-  width: auto;
-  font-family: "coco_light";
-}
-.article article p a {
+.article article p a,
+.article article div a {
   display: inline-block;
   width: auto;
   border-bottom: 1px solid #fff;
 }
-.article article p img {
+.article article p img,
+.article article div img {
   display: block;
   max-width: 100%;
 }
-.article article p img.aligncenter {
+.article article p img.aligncenter,
+.article article div img.aligncenter {
   margin: 0 auto;
 }
-.article article p img.alignleft {
+.article article p img.alignleft,
+.article article div img.alignleft {
   margin-right: auto;
 }
-.article article p img.alignright {
+.article article p img.alignright,
+.article article div img.alignright {
   margin-left: auto;
 }
 .article article h1,
@@ -1268,12 +1270,11 @@ html {
 .article article h4,
 .article article h5,
 .article article h6 {
-  font-family: "coco_light";
+  font-family: "coco_bold";
   font-weight: normal;
   display: inline-block;
   width: 100%;
   color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
   font-size: 60px;
   line-height: 60px;
 }
@@ -1298,6 +1299,9 @@ html {
   }
 }
 .article article h1 {
+  font-family: "coco_light";
+  -webkit-text-stroke: 1px #ffffff;
+  text-stroke: 1px #ffffff;
   padding-top: 0.5em;
   font-size: 100px;
   line-height: 100px;
@@ -1313,18 +1317,18 @@ html {
   }
 }
 .article article h1 strong {
-  font-size: 230px;
-  line-height: 230px;
+  font-size: 228px;
+  line-height: 228px;
   font-weight: normal;
 }
 @media only screen and (min-width: 0px) and (max-width: 1366px) {
   .article article h1 strong {
-    font-size: calc(52px + 178 * ((100vw - 320px) / 1046));
+    font-size: calc(52px + 176 * ((100vw - 320px) / 1046));
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 1366px) {
   .article article h1 strong {
-    line-height: calc(52px + 178 * ((100vw - 320px) / 1046));
+    line-height: calc(52px + 176 * ((100vw - 320px) / 1046));
   }
 }
 .article article ul,
@@ -1383,18 +1387,137 @@ html {
     height: calc(5px + 5 * ((100vw - 320px) / 1046));
   }
 }
+.article article b,
+.article article strong {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  font-family: "coco_light";
+}
+.article article h1 strong {
+  transition: transform 2000ms var(--cubic) 3000ms, opacity 2000ms var(--cubic) 3000ms;
+  opacity: 0;
+  transform: perspective(400px) scale(1) translate(20%, 0%) rotateY(120deg);
+  will-change: transform;
+  perspective: 600px;
+}
+.article article h1 strong:nth-child(1) {
+  transition: transform 2000ms var(--cubic) 0ms, opacity 2000ms var(--cubic) 0ms;
+}
+.article article h1 strong:nth-child(2) {
+  transition: transform 2000ms var(--cubic) 200ms, opacity 2000ms var(--cubic) 200ms;
+}
+.article article h1 strong:nth-child(3) {
+  transition: transform 2000ms var(--cubic) 400ms, opacity 2000ms var(--cubic) 400ms;
+}
+.article article h1 strong:nth-child(4) {
+  transition: transform 2000ms var(--cubic) 600ms, opacity 2000ms var(--cubic) 600ms;
+}
+.article article h1 strong:nth-child(5) {
+  transition: transform 2000ms var(--cubic) 800ms, opacity 2000ms var(--cubic) 800ms;
+}
+.article article h1 strong:nth-child(6) {
+  transition: transform 2000ms var(--cubic) 1000ms, opacity 2000ms var(--cubic) 1000ms;
+}
+.article article h1 strong:nth-child(7) {
+  transition: transform 2000ms var(--cubic) 1200ms, opacity 2000ms var(--cubic) 1200ms;
+}
+.article article h1 strong:nth-child(8) {
+  transition: transform 2000ms var(--cubic) 1400ms, opacity 2000ms var(--cubic) 1400ms;
+}
+.article article h1 strong:nth-child(9) {
+  transition: transform 2000ms var(--cubic) 1600ms, opacity 2000ms var(--cubic) 1600ms;
+}
+.article article h1 strong:nth-child(10) {
+  transition: transform 2000ms var(--cubic) 1800ms, opacity 2000ms var(--cubic) 1800ms;
+}
+.article article h1.animate strong {
+  opacity: 1;
+  transform: perspective(400px) scale(1) translate(0%, 0%) rotateY(0deg);
+}
+.article article p,
+.article article div,
+.article article h2,
+.article article h3,
+.article article h4,
+.article article h5,
+.article article h6,
+.article article ul,
+.article article ol {
+  position: relative;
+  transition: 800ms var(--cubic);
+  opacity: 0;
+  transform: translate(0px, 50px);
+}
+.article article p.animate,
+.article article div.animate,
+.article article h2.animate,
+.article article h3.animate,
+.article article h4.animate,
+.article article h5.animate,
+.article article h6.animate,
+.article article ul.animate,
+.article article ol.animate {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
 
 .post-thumbnail {
   display: block;
-  width: 100%;
+  width: 100vw;
   position: fixed;
-  left: 0px;
-  bottom: 0px;
+  position: relative;
+  left: 50%;
+  bottom: -40px;
+  transform: translate(-50%, 0%);
   z-index: -1;
+  opacity: 0.5;
+  margin-top: -100px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1366px) {
+  .post-thumbnail {
+    bottom: calc(-15px + -25 * ((100vw - 320px) / 1046));
+  }
 }
 .post-thumbnail img {
   display: block;
   width: 100%;
+}
+.post-thumbnail:before {
+  content: "";
+  width: 100%;
+  height: 30%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.postButtons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #fff;
+  padding: 20px 0px;
+  margin-top: 70px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1366px) {
+  .postButtons {
+    margin-top: calc(24px + 46 * ((100vw - 320px) / 1046));
+  }
+}
+.postButtons .postButtons__icon {
+  display: block;
+  max-width: 114px;
+  margin-right: 10px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1366px) {
+  .postButtons .postButtons__icon {
+    max-width: calc(72px + 42 * ((100vw - 320px) / 1046));
+  }
 }
 
 /*----------------------------------------------- BUTTONS*/
@@ -1938,10 +2061,15 @@ html {
 #video .popup {
   max-width: 100%;
   background: rgba(0, 0, 0, 0);
-  padding: 6vh 6vh 6vh 6vh;
+  padding: 40px;
   height: 100vh;
   transition: 500ms var(--cubic);
   transform: translate(0px, 0px) scale(1);
+}
+@media only screen and (min-width: 0px) and (max-width: 1366px) {
+  #video .popup {
+    padding: calc(15px + 25 * ((100vw - 320px) / 1046));
+  }
 }
 #video .popup:before {
   content: none;
