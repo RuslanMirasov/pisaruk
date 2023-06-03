@@ -27,10 +27,12 @@ document.addEventListener('DOMContentLoaded', event => {
   });
   window.addEventListener('load', () => {
     windowHeight = window.innerHeight;
-    bodyModifyHeight();
     setTimeout(function () {
       animate();
-    }, 300);
+    }, 500);
+    setTimeout(function () {
+      bodyModifyHeight();
+    }, 1200);
   });
   window.addEventListener('resize', () => {
     windowHeight = window.innerHeight;
@@ -40,8 +42,9 @@ document.addEventListener('DOMContentLoaded', event => {
 
   function bodyModifyHeight() {
     bodyHeight = body.offsetHeight;
-    if (bodyHeight < windowHeight) {
-      body.style.height = '100%';
+    if (bodyHeight !== windowHeight) {
+      body.style.height = windowHeight + 'px';
+      console.log(bodyHeight + ' = ' + windowHeight);
     } else {
       body.style.height = 'auto';
     }
