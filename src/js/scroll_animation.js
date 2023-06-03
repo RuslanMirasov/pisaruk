@@ -4,7 +4,7 @@ data-repeat              - если есть, повторяет анимаци�
 data-delay="500"         - задержка анимации в милисекундах
 */
 document.addEventListener('DOMContentLoaded', event => {
-  const body = document.querySelector('.body');
+  const whiteFrame = document.querySelector('.whiteFrameWrapper');
   const article = document.querySelector('.page');
   if (article && article.hasChildNodes()) {
     // Таким образом, сначала мы проверяем, не пуст ли объект, есть ли у него дети
@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', event => {
 
   let delay = 0;
   let windowHeight = window.innerHeight;
-  let bodyHeight = body.clientHeight;
 
   const amimateElements = document.querySelectorAll('[data-animation]');
   const screenGap = 50;
