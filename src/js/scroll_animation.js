@@ -26,27 +26,27 @@ document.addEventListener('DOMContentLoaded', event => {
     animate();
   });
   window.addEventListener('load', () => {
-    bodyModifyHeight();
+    // bodyModifyHeight();
     setTimeout(function () {
       animate();
     }, 500);
   });
   window.addEventListener('resize', () => {
     windowHeight = window.innerHeight;
-    bodyModifyHeight();
+    // bodyModifyHeight();
     animate();
   });
 
-  function bodyModifyHeight() {
-    if (bodyHeight < windowHeight) {
-      body.style.height = '100%';
-    } else {
-      body.style.height = '100%';
-    }
-    // bodyHeight = body.clientHeight;
-    windowHeight = window.innerHeight;
-    console.log('window: ' + windowHeight + '= Body: ' + bodyHeight);
-  }
+  // function bodyModifyHeight() {
+  //   if (bodyHeight < windowHeight) {
+  //     body.style.height = '100%';
+  //   } else {
+  //     body.style.height = '100%';
+  //   }
+  //   // bodyHeight = body.clientHeight;
+  //   windowHeight = window.innerHeight;
+  //   console.log('window: ' + windowHeight + '= Body: ' + bodyHeight);
+  // }
 
   function animate() {
     amimateElements.forEach(element => {

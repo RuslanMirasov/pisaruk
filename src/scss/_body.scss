@@ -9,7 +9,7 @@ html {
   flex-wrap: wrap;
   align-content: space-between;
   width: 100%;
-  height: auto;
+  height: 100%;
   font-family: 'coco_ultralight', verdana;
   font-size: 12px;
   line-height: calc(16 / 12);
@@ -28,7 +28,8 @@ html {
   justify-content: center;
   box-sizing: border-box;
   position: relative;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   @include css-r('padding', 40, 15, 1);
   z-index: 2;
 }
@@ -63,6 +64,5 @@ html {
   @include css-r('top', 39, 14, 1);
   @include css-r('bottom', 39, 14, 1);
   @include css-r('left', 39, 14, 1);
-  background: rgba(15, 155, 236, 0.137);
   border: 1px solid rgba(255, 255, 255, 0.6);
 }

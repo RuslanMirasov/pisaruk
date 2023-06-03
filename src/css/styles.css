@@ -44,7 +44,7 @@ html {
   flex-wrap: wrap;
   align-content: space-between;
   width: 100%;
-  height: auto;
+  height: 100%;
   font-family: "coco_ultralight", verdana;
   font-size: 12px;
   line-height: 1.3333333333;
@@ -62,7 +62,8 @@ html {
   justify-content: center;
   box-sizing: border-box;
   position: relative;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   padding: 40px;
   z-index: 2;
 }
@@ -122,7 +123,6 @@ html {
   top: 39px;
   bottom: 39px;
   left: 39px;
-  background: rgba(15, 155, 236, 0.137);
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 @media only screen and (min-width: 0px) and (max-width: 1366px) {
