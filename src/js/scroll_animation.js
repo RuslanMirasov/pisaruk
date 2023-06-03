@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', event => {
     if (bodyHeight < windowHeight) {
       body.style.height = '100%';
     } else {
-      body.style.height = 'auto';
+      body.style.height = '100%';
     }
     // bodyHeight = body.clientHeight;
     windowHeight = window.innerHeight;
