@@ -17,37 +17,35 @@ document.addEventListener('DOMContentLoaded', event => {
 
   let delay = 0;
   let windowHeight = window.innerHeight;
-  let bodyHeight = body.offsetHeight;
+  let bodyHeight = body.clientHeight;
+
   const amimateElements = document.querySelectorAll('[data-animation]');
   const screenGap = 50;
 
   window.addEventListener('scroll', () => {
-    windowHeight = window.innerHeight;
     animate();
   });
   window.addEventListener('load', () => {
-    windowHeight = window.innerHeight;
+    bodyModifyHeight();
     setTimeout(function () {
       animate();
     }, 500);
-    setTimeout(function () {
-      bodyModifyHeight();
-    }, 1200);
   });
   window.addEventListener('resize', () => {
     windowHeight = window.innerHeight;
-    animate();
     bodyModifyHeight();
+    animate();
   });
 
   function bodyModifyHeight() {
-    bodyHeight = body.offsetHeight;
-    if (bodyHeight !== windowHeight) {
-      body.style.height = windowHeight + 'px';
-      console.log(bodyHeight + ' = ' + windowHeight);
+    if (bodyHeight < windowHeight) {
+      body.style.height = '100%';
     } else {
       body.style.height = 'auto';
     }
+    // bodyHeight = body.clientHeight;
+    windowHeight = window.innerHeight;
+    console.log('window: ' + windowHeight + '= Body: ' + bodyHeight);
   }
 
   function animate() {
