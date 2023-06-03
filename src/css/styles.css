@@ -110,39 +110,39 @@ html {
 
 .whiteFrameWrapper {
   position: fixed;
+  width: 100%;
+  height: 100%;
   z-index: 50;
   pointer-events: none;
+}
+
+.whiteFrame {
+  position: absolute;
   right: 39px;
   top: 39px;
   bottom: 39px;
   left: 39px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 @media only screen and (min-width: 0px) and (max-width: 1366px) {
-  .whiteFrameWrapper {
+  .whiteFrame {
     right: calc(14px + 25 * ((100vw - 320px) / 1046));
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 1366px) {
-  .whiteFrameWrapper {
+  .whiteFrame {
     top: calc(14px + 25 * ((100vw - 320px) / 1046));
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 1366px) {
-  .whiteFrameWrapper {
+  .whiteFrame {
     bottom: calc(14px + 25 * ((100vw - 320px) / 1046));
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 1366px) {
-  .whiteFrameWrapper {
+  .whiteFrame {
     left: calc(14px + 25 * ((100vw - 320px) / 1046));
   }
-}
-
-.whiteFrame {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 /*----------------------------------------------- TYPOGRAPHY */

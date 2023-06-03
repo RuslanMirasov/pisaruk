@@ -26,17 +26,16 @@ document.addEventListener('DOMContentLoaded', event => {
     animate();
   });
   window.addEventListener('load', () => {
+    windowHeight = window.innerHeight;
+    bodyModifyHeight();
     setTimeout(function () {
-      bodyModifyHeight();
       animate();
     }, 300);
   });
   window.addEventListener('resize', () => {
     windowHeight = window.innerHeight;
     animate();
-    setTimeout(function () {
-      bodyModifyHeight();
-    }, 10);
+    bodyModifyHeight();
   });
 
   function bodyModifyHeight() {
