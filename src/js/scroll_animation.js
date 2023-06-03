@@ -4,7 +4,7 @@ data-repeat              - если есть, повторяет анимаци�
 data-delay="500"         - задержка анимации в милисекундах
 */
 document.addEventListener('DOMContentLoaded', event => {
-  const whiteFrame = document.querySelector('.whiteFrameWrapper');
+  const body = document.querySelector('.body');
   const article = document.querySelector('.page');
   if (article && article.hasChildNodes()) {
     // Таким образом, сначала мы проверяем, не пуст ли объект, есть ли у него дети
@@ -22,30 +22,22 @@ document.addEventListener('DOMContentLoaded', event => {
   const screenGap = 50;
 
   window.addEventListener('scroll', () => {
+    bodyModifyHeight();
     animate();
   });
   window.addEventListener('load', () => {
-    // bodyModifyHeight();
     setTimeout(function () {
       animate();
     }, 500);
   });
   window.addEventListener('resize', () => {
     windowHeight = window.innerHeight;
-    // bodyModifyHeight();
     animate();
   });
 
-  // function bodyModifyHeight() {
-  //   if (bodyHeight < windowHeight) {
-  //     body.style.height = '100%';
-  //   } else {
-  //     body.style.height = '100%';
-  //   }
-  //   // bodyHeight = body.clientHeight;
-  //   windowHeight = window.innerHeight;
-  //   console.log('window: ' + windowHeight + '= Body: ' + bodyHeight);
-  // }
+  function bodyModifyHeight() {
+    document.querySelector('.logo').innerHTML = body.clientHeight;
+  }
 
   function animate() {
     amimateElements.forEach(element => {
