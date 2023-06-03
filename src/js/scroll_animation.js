@@ -33,14 +33,16 @@ document.addEventListener('DOMContentLoaded', event => {
   });
   window.addEventListener('resize', () => {
     windowHeight = window.innerHeight;
-    bodyModifyHeight();
     animate();
+    setTimeout(function () {
+      bodyModifyHeight();
+    }, 10);
   });
 
   function bodyModifyHeight() {
     bodyHeight = body.offsetHeight;
     if (bodyHeight < windowHeight) {
-      body.style.height = windowHeight + 'px';
+      body.style.height = '100%';
     } else {
       body.style.height = 'auto';
     }
