@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', event => {
   });
 
   function bodyModifyHeight() {
-    document.querySelector('.logo').innerHTML = body.clientHeight;
+    document.querySelector('.logo').innerHTML = body.offsetHeight;
   }
 
   function animate() {
