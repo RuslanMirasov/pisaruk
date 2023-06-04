@@ -680,6 +680,47 @@ html {
   position: relative;
 }
 
+.aboutSlider {
+  display: block;
+  width: 100vw;
+  max-height: 100vh;
+  position: fixed;
+  position: relative;
+  left: 50%;
+  bottom: -40px;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+  opacity: 0;
+  margin-top: -100px;
+  transition: opacity 1000ms var(--cubic);
+}
+@media only screen and (min-width: 0px) and (max-width: 1366px) {
+  .aboutSlider {
+    bottom: calc(-15px + -25 * ((100vw - 320px) / 1046));
+  }
+}
+.aboutSlider.animate {
+  opacity: 0.8;
+}
+.aboutSlider img {
+  display: block;
+  width: 100%;
+}
+.aboutSlider:before {
+  content: "";
+  width: 100%;
+  height: 30%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 5;
+}
+.aboutSlider.heroSlider--poster img {
+  position: relative;
+}
+
 .heroSwiper {
   width: 100%;
   height: 100%;
