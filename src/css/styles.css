@@ -109,6 +109,7 @@ html {
   position: fixed;
   display: block;
   z-index: 50;
+  height: calc(50% - 39px);
   pointer-events: none;
   right: 39px;
   left: 39px;
@@ -126,22 +127,65 @@ html {
 }
 .whiteFrame.bottom {
   bottom: 39px;
-  top: 50%;
   border-top: none;
-}
-@media only screen and (min-width: 0px) and (max-width: 1366px) {
-  .whiteFrame.bottom {
-    bottom: calc(14px + 25 * ((100vw - 320px) / 1046));
-  }
 }
 .whiteFrame.top {
   top: 39px;
-  bottom: 50%;
   border-bottom: none;
 }
-@media only screen and (min-width: 0px) and (max-width: 1366px) {
+@media screen and (max-width: 1279px) {
+  .whiteFrame {
+    height: calc(50% - 29px);
+  }
+  .whiteFrame.bottom {
+    bottom: 29px;
+  }
   .whiteFrame.top {
-    top: calc(14px + 25 * ((100vw - 320px) / 1046));
+    top: 29px;
+  }
+}
+@media screen and (max-width: 869px) {
+  .whiteFrame {
+    height: calc(50% - 25px);
+  }
+  .whiteFrame.bottom {
+    bottom: 25px;
+  }
+  .whiteFrame.top {
+    top: 25px;
+  }
+}
+@media screen and (max-width: 729px) {
+  .whiteFrame {
+    height: calc(50% - 22px);
+  }
+  .whiteFrame.bottom {
+    bottom: 22px;
+  }
+  .whiteFrame.top {
+    top: 22px;
+  }
+}
+@media screen and (max-width: 549px) {
+  .whiteFrame {
+    height: calc(50% - 20px);
+  }
+  .whiteFrame.bottom {
+    bottom: 20px;
+  }
+  .whiteFrame.top {
+    top: 20px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .whiteFrame {
+    height: calc(50% - 14px);
+  }
+  .whiteFrame.bottom {
+    bottom: 14px;
+  }
+  .whiteFrame.top {
+    top: 14px;
   }
 }
 

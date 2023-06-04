@@ -54,21 +54,62 @@ html {
   position: fixed;
   display: block;
   z-index: 50;
+  height: calc(50% - 39px);
   pointer-events: none;
   @include css-r('right', 39, 14, 1);
   @include css-r('left', 39, 14, 1);
   border: 1px solid rgba(255, 255, 255, 0.6);
   &.bottom {
-    @include css-r('bottom', 39, 14, 1);
-    top: 50%;
+    bottom: 39px;
     border-top: none;
   }
   &.top {
-    @include css-r('top', 39, 14, 1);
-    bottom: 50%;
+    top: 39px;
     border-bottom: none;
   }
-  // @media screen and (max-width: 1023px) {
-  //   border: 1px solid rgb(184, 184, 184);
-  // }
+  @media screen and (max-width: 1279px) {
+    &.bottom {
+      bottom: 29px;
+    }
+    &.top {
+      top: 29px;
+    }
+    height: calc(50% - 29px);
+  }
+  @media screen and (max-width: 869px) {
+    &.bottom {
+      bottom: 25px;
+    }
+    &.top {
+      top: 25px;
+    }
+    height: calc(50% - 25px);
+  }
+  @media screen and (max-width: 729px) {
+    &.bottom {
+      bottom: 22px;
+    }
+    &.top {
+      top: 22px;
+    }
+    height: calc(50% - 22px);
+  }
+  @media screen and (max-width: 549px) {
+    &.bottom {
+      bottom: 20px;
+    }
+    &.top {
+      top: 20px;
+    }
+    height: calc(50% - 20px);
+  }
+  @media screen and (max-width: 440px) {
+    &.bottom {
+      bottom: 14px;
+    }
+    &.top {
+      top: 14px;
+    }
+    height: calc(50% - 14px);
+  }
 }
