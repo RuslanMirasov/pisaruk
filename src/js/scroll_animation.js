@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', event => {
   let windowHeight = window.innerHeight;
 
   const amimateElements = document.querySelectorAll('[data-animation]');
-  const screenGap = 50;
+  const screenGap = 0;
 
   window.addEventListener('scroll', () => {
     animate();

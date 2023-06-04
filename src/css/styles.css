@@ -105,45 +105,12 @@ html {
   }
 }
 
-.whiteFrameWrapper {
+.whiteFrame {
   position: fixed;
   display: block;
-  width: 100%;
-  left: 0px;
   z-index: 50;
   pointer-events: none;
-}
-.whiteFrameWrapper.bottom {
-  bottom: 0px;
-  height: 100%;
-}
-@media screen and (max-width: 1023px) {
-  .whiteFrameWrapper.bottom {
-    height: 80%;
-  }
-  .whiteFrameWrapper.bottom .whiteFrame {
-    border-top: none;
-  }
-}
-.whiteFrameWrapper.top {
-  display: none;
-  top: 0px;
-  height: 80%;
-}
-.whiteFrameWrapper.top .whiteFrame {
-  border-bottom: none;
-}
-@media screen and (max-width: 1023px) {
-  .whiteFrameWrapper.top {
-    display: block;
-  }
-}
-
-.whiteFrame {
-  position: absolute;
   right: 39px;
-  top: 39px;
-  bottom: 39px;
   left: 39px;
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
@@ -154,22 +121,27 @@ html {
 }
 @media only screen and (min-width: 0px) and (max-width: 1366px) {
   .whiteFrame {
-    top: calc(14px + 25 * ((100vw - 320px) / 1046));
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 1366px) {
-  .whiteFrame {
-    bottom: calc(14px + 25 * ((100vw - 320px) / 1046));
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 1366px) {
-  .whiteFrame {
     left: calc(14px + 25 * ((100vw - 320px) / 1046));
   }
 }
-@media screen and (max-width: 1023px) {
-  .whiteFrame {
-    border: 1px solid rgb(184, 184, 184);
+.whiteFrame.bottom {
+  bottom: 39px;
+  top: 50%;
+  border-top: none;
+}
+@media only screen and (min-width: 0px) and (max-width: 1366px) {
+  .whiteFrame.bottom {
+    bottom: calc(14px + 25 * ((100vw - 320px) / 1046));
+  }
+}
+.whiteFrame.top {
+  top: 39px;
+  bottom: 50%;
+  border-bottom: none;
+}
+@media only screen and (min-width: 0px) and (max-width: 1366px) {
+  .whiteFrame.top {
+    top: calc(14px + 25 * ((100vw - 320px) / 1046));
   }
 }
 

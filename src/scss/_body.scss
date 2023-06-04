@@ -50,45 +50,25 @@ html {
   @include css-r('padding-right', 40, 15, 1);
 }
 
-.whiteFrameWrapper {
+.whiteFrame {
   position: fixed;
   display: block;
-  width: 100%;
-  left: 0px;
-
   z-index: 50;
   pointer-events: none;
-  &.bottom {
-    bottom: 0px;
-    height: 100%;
-    @media screen and (max-width: 1023px) {
-      height: 80%;
-      .whiteFrame {
-        border-top: none;
-      }
-    }
-  }
-  &.top {
-    display: none;
-    top: 0px;
-    height: 80%;
-    .whiteFrame {
-      border-bottom: none;
-    }
-    @media screen and (max-width: 1023px) {
-      display: block;
-    }
-  }
-}
-
-.whiteFrame {
-  position: absolute;
   @include css-r('right', 39, 14, 1);
-  @include css-r('top', 39, 14, 1);
-  @include css-r('bottom', 39, 14, 1);
   @include css-r('left', 39, 14, 1);
   border: 1px solid rgba(255, 255, 255, 0.6);
-  @media screen and (max-width: 1023px) {
-    border: 1px solid rgb(184, 184, 184);
+  &.bottom {
+    @include css-r('bottom', 39, 14, 1);
+    top: 50%;
+    border-top: none;
   }
+  &.top {
+    @include css-r('top', 39, 14, 1);
+    bottom: 50%;
+    border-bottom: none;
+  }
+  // @media screen and (max-width: 1023px) {
+  //   border: 1px solid rgb(184, 184, 184);
+  // }
 }
