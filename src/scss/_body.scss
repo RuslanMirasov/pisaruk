@@ -69,47 +69,14 @@ html {
   }
   @media screen and (max-width: 1279px) {
     &.bottom {
-      bottom: 29px;
+      @include css-r('bottom', 39, 14, 1);
+      border-top: none;
     }
     &.top {
-      top: 29px;
+      @include css-r('top', 39, 14, 1);
+      border-bottom: none;
     }
-    height: calc(50% - 29px);
-  }
-  @media screen and (max-width: 869px) {
-    &.bottom {
-      bottom: 25px;
-    }
-    &.top {
-      top: 25px;
-    }
-    height: calc(50% - 25px);
-  }
-  @media screen and (max-width: 729px) {
-    &.bottom {
-      bottom: 22px;
-    }
-    &.top {
-      top: 22px;
-    }
-    height: calc(50% - 22px);
-  }
-  @media screen and (max-width: 549px) {
-    &.bottom {
-      bottom: 20px;
-    }
-    &.top {
-      top: 20px;
-    }
-    height: calc(50% - 20px);
-  }
-  @media screen and (max-width: 440px) {
-    &.bottom {
-      bottom: 14px;
-    }
-    &.top {
-      top: 14px;
-    }
-    height: calc(50% - 14px);
+    height: 70%;
+    border: 1px solid rgb(173, 173, 173);
   }
 }
