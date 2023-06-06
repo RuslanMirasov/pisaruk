@@ -650,19 +650,29 @@ html {
   justify-content: center;
   align-items: center;
   font-size: 18px;
-  line-height: 1.3333333333;
-  gap: 8px;
+  line-height: 18px;
 }
-.language span {
-  cursor: default;
+.language li {
+  padding: 0px 10px;
 }
-.language .language__link {
+.language li:first-child {
+  padding-left: 0px;
+  border-right: 1px solid #fff;
+}
+.language li:last-child {
+  padding-right: 0px;
+}
+.language a {
+  display: inline-block;
   transition: 250ms var(--cubic);
   color: #fff;
   opacity: 0.4;
 }
-.language .language__link:hover, .language .language__link:focus, .language .language__link.active {
+.language a:hover, .language a:focus, .language a.active {
   opacity: 1;
+}
+.language a:first-letter {
+  text-transform: uppercase;
 }
 
 .heroSlider {
